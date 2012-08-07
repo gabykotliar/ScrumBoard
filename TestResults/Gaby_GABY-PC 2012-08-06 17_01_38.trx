@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="2b08783e-36fc-49df-86e8-266b64b689af" name="Gaby@GABY-PC 2012-08-06 17:01:38" runUser="Gaby-PC\Gaby" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="314ea883-3442-48a7-a1fa-f8f9c03203bb">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Gaby_GABY-PC 2012-08-06 17_01_38">
+      <DeploymentItem filename="D:\GL\Scrum\ScrumBoard\Domain\bin\Debug\ScrumBoard.Domain.dll" />
+      <DeploymentItem filename="D:\GL\Scrum\ScrumBoard\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll" />
+      <DeploymentItem filename="D:\GL\Scrum\ScrumBoard\packages\FluentAssertions.1.7.1.1\Lib\net40\FluentAssertions.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-08-06T17:01:38.8810000-03:00" queuing="2012-08-06T17:01:42.0000000-03:00" start="2012-08-06T17:01:42.2430000-03:00" finish="2012-08-06T17:02:01.8630000-03:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="7" executed="7" passed="6" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="GABY-PC" outcome="Error" timestamp="2012-08-06T17:02:01.7590000-03:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="IShouldBeHableToUniquelyIdentifyAUserStory" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="a85e59b0-fb9e-dbc6-5ccf-2d106774cd5a">
+      <Description>I should be hable to uniquely identify a user story</Description>
+      <Execution id="96a01552-21ed-40c4-8838-732aff113365" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>UserStory</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.UserStoryFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IShouldBeHableToUniquelyIdentifyAUserStory" />
+    </UnitTest>
+    <UnitTest name="AProjectShouldHaveABacklog" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="6ebe4eec-fbe9-caaf-0a7f-0a6912e407ef">
+      <Description>A project should have a backlog</Description>
+      <Execution id="9db8df5a-f76c-4ab7-b442-e01cdb3da817" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Project</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProjectFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AProjectShouldHaveABacklog" />
+    </UnitTest>
+    <UnitTest name="AUserStoryShouldHaveAText" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="4b3eaaf6-8324-41ab-054e-38d11d06c9d8">
+      <Description>A user story should have a text</Description>
+      <Execution id="51a9c377-d3ba-450e-8b93-4fc2dbd18464" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>UserStory</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.UserStoryFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AUserStoryShouldHaveAText" />
+    </UnitTest>
+    <UnitTest name="AProjectShouldHaveAName" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="9bcca343-b7e7-300b-ae17-436385c1fe2d">
+      <Description>A project should have a name</Description>
+      <Execution id="b99ba752-2033-4c51-a080-4fc62aca7d88" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Project</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProjectFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AProjectShouldHaveAName" />
+    </UnitTest>
+    <UnitTest name="ANewUserStoryShouldStartWithATemplate" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="f392da82-59ca-fea6-4780-6cc0fd467d1b">
+      <Description>A new user story should start with a template</Description>
+      <Execution id="4c510caf-378d-48f3-9244-a958743c6e5c" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>UserStory</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.UserStoryFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ANewUserStoryShouldStartWithATemplate" />
+    </UnitTest>
+    <UnitTest name="IShouldBeHableToUniquelyIdentifyAProject" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="263d0a80-81bd-30ec-e60b-4219a627a337">
+      <Description>I should be hable to uniquely identify a project</Description>
+      <Execution id="332d928e-bfe1-4de0-bb1d-6e95ccd02cbf" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Project</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProjectFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IShouldBeHableToUniquelyIdentifyAProject" />
+    </UnitTest>
+    <UnitTest name="AddUserStory" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="6dc10f22-9326-1114-4aac-09d13f12d7a3">
+      <Description>Add User Story</Description>
+      <Execution id="09eaeb38-42f8-4abe-8369-deec01fc496b" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Product Backlog</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProductBacklogFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddUserStory" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="263d0a80-81bd-30ec-e60b-4219a627a337" executionId="332d928e-bfe1-4de0-bb1d-6e95ccd02cbf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4b3eaaf6-8324-41ab-054e-38d11d06c9d8" executionId="51a9c377-d3ba-450e-8b93-4fc2dbd18464" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6dc10f22-9326-1114-4aac-09d13f12d7a3" executionId="09eaeb38-42f8-4abe-8369-deec01fc496b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ebe4eec-fbe9-caaf-0a7f-0a6912e407ef" executionId="9db8df5a-f76c-4ab7-b442-e01cdb3da817" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9bcca343-b7e7-300b-ae17-436385c1fe2d" executionId="b99ba752-2033-4c51-a080-4fc62aca7d88" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a85e59b0-fb9e-dbc6-5ccf-2d106774cd5a" executionId="96a01552-21ed-40c4-8838-732aff113365" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f392da82-59ca-fea6-4780-6cc0fd467d1b" executionId="4c510caf-378d-48f3-9244-a958743c6e5c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="332d928e-bfe1-4de0-bb1d-6e95ccd02cbf" testId="263d0a80-81bd-30ec-e60b-4219a627a337" testName="IShouldBeHableToUniquelyIdentifyAProject" computerName="GABY-PC" duration="00:00:00.1827764" startTime="2012-08-06T17:01:42.4640000-03:00" endTime="2012-08-06T17:01:45.3840000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="332d928e-bfe1-4de0-bb1d-6e95ccd02cbf">
+      <Output>
+        <StdOut>Given I have a project
+-&gt; done: ProjectSteps.GivenIHaveAProject() (0.0s)
+Then It should have a unique key
+-&gt; done: GenericSteps.ThenIShouldBeHableToUniquelyIdentifyIt() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="51a9c377-d3ba-450e-8b93-4fc2dbd18464" testId="4b3eaaf6-8324-41ab-054e-38d11d06c9d8" testName="AUserStoryShouldHaveAText" computerName="GABY-PC" duration="00:00:00.0085600" startTime="2012-08-06T17:01:45.4060000-03:00" endTime="2012-08-06T17:01:45.4260000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="51a9c377-d3ba-450e-8b93-4fc2dbd18464">
+      <Output>
+        <StdOut>Given I have a story
+-&gt; done: UserStorySteps.GivenIHaveAStory() (0.0s)
+Then I should be hable to define its text
+-&gt; done: UserStorySteps.ThenIShouldBeHableToDefineItsText() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="09eaeb38-42f8-4abe-8369-deec01fc496b" testId="6dc10f22-9326-1114-4aac-09d13f12d7a3" testName="AddUserStory" computerName="GABY-PC" duration="00:00:00.0048139" startTime="2012-08-06T17:01:45.5440000-03:00" endTime="2012-08-06T17:01:45.5630000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="09eaeb38-42f8-4abe-8369-deec01fc496b">
+      <Output>
+        <StdOut>Given I have a Product Backlog
+-&gt; done: ProductBacklogSteps.GivenIHaveAProductBacklog() (0.0s)
+Then I should be able to add a User Story
+-&gt; done: ProductBacklogSteps.ThenIShouldBeAbleToAddAUserStory() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9db8df5a-f76c-4ab7-b442-e01cdb3da817" testId="6ebe4eec-fbe9-caaf-0a7f-0a6912e407ef" testName="AProjectShouldHaveABacklog" computerName="GABY-PC" duration="00:00:00.0016353" startTime="2012-08-06T17:01:45.5760000-03:00" endTime="2012-08-06T17:01:45.5840000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9db8df5a-f76c-4ab7-b442-e01cdb3da817">
+      <Output>
+        <StdOut>Given I have a project
+-&gt; done: ProjectSteps.GivenIHaveAProject() (0.0s)
+Then It should have a backlog
+-&gt; done: ProjectSteps.ThenItShouldHaveABacklog() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b99ba752-2033-4c51-a080-4fc62aca7d88" testId="9bcca343-b7e7-300b-ae17-436385c1fe2d" testName="AProjectShouldHaveAName" computerName="GABY-PC" duration="00:00:00.0012053" startTime="2012-08-06T17:01:45.5950000-03:00" endTime="2012-08-06T17:01:45.6070000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b99ba752-2033-4c51-a080-4fc62aca7d88">
+      <Output>
+        <StdOut>Given I have a project
+-&gt; done: ProjectSteps.GivenIHaveAProject() (0.0s)
+Then I should be hable to assign a name to it
+-&gt; done: ProjectSteps.ThenIShouldBeHableToAssignANameToIt() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="96a01552-21ed-40c4-8838-732aff113365" testId="a85e59b0-fb9e-dbc6-5ccf-2d106774cd5a" testName="IShouldBeHableToUniquelyIdentifyAUserStory" computerName="GABY-PC" duration="00:00:00.0008093" startTime="2012-08-06T17:01:45.6170000-03:00" endTime="2012-08-06T17:01:45.6270000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="96a01552-21ed-40c4-8838-732aff113365">
+      <Output>
+        <StdOut>Given I have a story
+-&gt; done: UserStorySteps.GivenIHaveAStory() (0.0s)
+Then It should have a unique key
+-&gt; done: GenericSteps.ThenIShouldBeHableToUniquelyIdentifyIt() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4c510caf-378d-48f3-9244-a958743c6e5c" testId="f392da82-59ca-fea6-4780-6cc0fd467d1b" testName="ANewUserStoryShouldStartWithATemplate" computerName="GABY-PC" duration="00:00:16.1890000" startTime="2012-08-06T17:01:45.6370000-03:00" endTime="2012-08-06T17:02:01.8260000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4c510caf-378d-48f3-9244-a958743c6e5c">
+    </UnitTestResult>
+  </Results>
+</TestRun>

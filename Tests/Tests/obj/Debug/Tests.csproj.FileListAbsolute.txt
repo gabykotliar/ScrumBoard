@@ -1,0 +1,4 @@
+D:\GL\Scrum\ScrumBoard\Tests\Tests\bin\Debug\Tests.dll
+D:\GL\Scrum\ScrumBoard\Tests\Tests\bin\Debug\Tests.pdb
+D:\GL\Scrum\ScrumBoard\Tests\Tests\obj\Debug\Tests.dll
+D:\GL\Scrum\ScrumBoard\Tests\Tests\obj\Debug\Tests.pdb

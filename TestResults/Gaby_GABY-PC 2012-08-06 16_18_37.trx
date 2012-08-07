@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e883a8d0-062d-430d-b2de-23b1cb3f6c9a" name="Gaby@GABY-PC 2012-08-06 16:18:37" runUser="Gaby-PC\Gaby" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="314ea883-3442-48a7-a1fa-f8f9c03203bb">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Gaby_GABY-PC 2012-08-06 16_18_37">
+      <DeploymentItem filename="D:\GL\Scrum\ScrumBoard\Domain\bin\Debug\ScrumBoard.Domain.dll" />
+      <DeploymentItem filename="D:\GL\Scrum\ScrumBoard\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll" />
+      <DeploymentItem filename="D:\GL\Scrum\ScrumBoard\packages\FluentAssertions.1.7.1.1\Lib\net40\FluentAssertions.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-08-06T16:18:37.8080000-03:00" queuing="2012-08-06T16:18:38.0120000-03:00" start="2012-08-06T16:18:38.0490000-03:00" finish="2012-08-06T16:18:38.6690000-03:00" />
+  <ResultSummary outcome="Inconclusive">
+    <Counters total="7" executed="7" passed="4" error="0" failed="0" timeout="0" aborted="0" inconclusive="3" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AStoryShouldHaveAUniqueKey" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="f731888a-5818-2b1b-6db1-9a6cb9294436">
+      <Description>A story should have a unique key</Description>
+      <Execution id="69ac773a-bc73-450d-9409-f18074f59920" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>UserStory</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.UserStoryFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AStoryShouldHaveAUniqueKey" />
+    </UnitTest>
+    <UnitTest name="AProjectShouldHaveABacklog" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="6ebe4eec-fbe9-caaf-0a7f-0a6912e407ef">
+      <Description>A project should have a backlog</Description>
+      <Execution id="7c947a08-2765-4969-9c8e-e38a3ea02610" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Project</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProjectFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AProjectShouldHaveABacklog" />
+    </UnitTest>
+    <UnitTest name="AUserStoryShouldHaveAText" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="4b3eaaf6-8324-41ab-054e-38d11d06c9d8">
+      <Description>A user story should have a text</Description>
+      <Execution id="0b5e26be-6af7-45d5-91d1-b844f3939715" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>UserStory</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.UserStoryFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AUserStoryShouldHaveAText" />
+    </UnitTest>
+    <UnitTest name="AProjectShouldHaveAName" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="9bcca343-b7e7-300b-ae17-436385c1fe2d">
+      <Description>A project should have a name</Description>
+      <Execution id="798dffe8-36ea-46f5-99d1-ba9a1f987e58" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Project</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProjectFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AProjectShouldHaveAName" />
+    </UnitTest>
+    <UnitTest name="ANewUserStoryShouldStartWithATemplate" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="f392da82-59ca-fea6-4780-6cc0fd467d1b">
+      <Description>A new user story should start with a template</Description>
+      <Execution id="2a53192a-5012-4bce-8213-9a56b0b1fe27" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>UserStory</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.UserStoryFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ANewUserStoryShouldStartWithATemplate" />
+    </UnitTest>
+    <UnitTest name="AProjectShouldHaveAUniqueKey" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="1207ee63-661b-b01a-fa1a-c8ebb1acbbcb">
+      <Description>A project should have a unique key</Description>
+      <Execution id="ed0c5e63-8e00-4c84-a0ac-a74bf0c7a3d7" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Project</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProjectFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AProjectShouldHaveAUniqueKey" />
+    </UnitTest>
+    <UnitTest name="AddUserStory" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="6dc10f22-9326-1114-4aac-09d13f12d7a3">
+      <Description>Add User Story</Description>
+      <Execution id="d66371f1-ed54-4b60-b1c8-85d69eaeeb28" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Product Backlog</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProductBacklogFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddUserStory" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="1207ee63-661b-b01a-fa1a-c8ebb1acbbcb" executionId="ed0c5e63-8e00-4c84-a0ac-a74bf0c7a3d7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4b3eaaf6-8324-41ab-054e-38d11d06c9d8" executionId="0b5e26be-6af7-45d5-91d1-b844f3939715" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6dc10f22-9326-1114-4aac-09d13f12d7a3" executionId="d66371f1-ed54-4b60-b1c8-85d69eaeeb28" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ebe4eec-fbe9-caaf-0a7f-0a6912e407ef" executionId="7c947a08-2765-4969-9c8e-e38a3ea02610" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9bcca343-b7e7-300b-ae17-436385c1fe2d" executionId="798dffe8-36ea-46f5-99d1-ba9a1f987e58" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f392da82-59ca-fea6-4780-6cc0fd467d1b" executionId="2a53192a-5012-4bce-8213-9a56b0b1fe27" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f731888a-5818-2b1b-6db1-9a6cb9294436" executionId="69ac773a-bc73-450d-9409-f18074f59920" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="ed0c5e63-8e00-4c84-a0ac-a74bf0c7a3d7" testId="1207ee63-661b-b01a-fa1a-c8ebb1acbbcb" testName="AProjectShouldHaveAUniqueKey" computerName="GABY-PC" duration="00:00:00.0668167" startTime="2012-08-06T16:18:38.0540000-03:00" endTime="2012-08-06T16:18:38.5330000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed0c5e63-8e00-4c84-a0ac-a74bf0c7a3d7">
+      <Output>
+        <StdOut>Given I have a project
+-&gt; done: ProjectSteps.GivenIHaveAProject() (0.0s)
+Then I should be hable to uniquely identify it
+-&gt; done: ProjectSteps.ThenIShouldBeHableToUniquelyIdentifyIt() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0b5e26be-6af7-45d5-91d1-b844f3939715" testId="4b3eaaf6-8324-41ab-054e-38d11d06c9d8" testName="AUserStoryShouldHaveAText" computerName="GABY-PC" duration="00:00:00.0175224" startTime="2012-08-06T16:18:38.5340000-03:00" endTime="2012-08-06T16:18:38.5580000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0b5e26be-6af7-45d5-91d1-b844f3939715">
+      <Output>
+        <StdOut>Given I have a story
+-&gt; pending: UserStorySteps.GivenIHaveAStory()
+Then I should be hable to define its text
+-&gt; skipped because of previous errors</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. One or more step definitions are not implemented yet.
+  UserStorySteps.GivenIHaveAStory()</Message>
+          <StackTrace>   at lambda_method(Closure , String , Object[] )
+   at TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestInconclusive(String message)
+   at TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestPending(String message)
+   at TechTalk.SpecFlow.ErrorHandling.ErrorProvider.ThrowPendingError(TestStatus testStatus, String message)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ScrumBoard.Specs.UserStoryFeature.ScenarioCleanup() in D:\GL\Scrum\ScrumBoard\Tests\Specs\UserStory.feature.cs:line 0
+   at ScrumBoard.Specs.UserStoryFeature.AUserStoryShouldHaveAText() in d:\GL\Scrum\ScrumBoard\Tests\Specs\UserStory.feature:line 12
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d66371f1-ed54-4b60-b1c8-85d69eaeeb28" testId="6dc10f22-9326-1114-4aac-09d13f12d7a3" testName="AddUserStory" computerName="GABY-PC" duration="00:00:00.0046885" startTime="2012-08-06T16:18:38.5690000-03:00" endTime="2012-08-06T16:18:38.5830000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d66371f1-ed54-4b60-b1c8-85d69eaeeb28">
+      <Output>
+        <StdOut>Given I have a Product Backlog
+-&gt; done: ProductBacklogSteps.GivenIHaveAProductBacklog() (0.0s)
+Then I should be able to add a User Story
+-&gt; done: ProductBacklogSteps.ThenIShouldBeAbleToAddAUserStory() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7c947a08-2765-4969-9c8e-e38a3ea02610" testId="6ebe4eec-fbe9-caaf-0a7f-0a6912e407ef" testName="AProjectShouldHaveABacklog" computerName="GABY-PC" duration="00:00:00.0021559" startTime="2012-08-06T16:18:38.5860000-03:00" endTime="2012-08-06T16:18:38.5920000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7c947a08-2765-4969-9c8e-e38a3ea02610">
+      <Output>
+        <StdOut>Given I have a project
+-&gt; done: ProjectSteps.GivenIHaveAProject() (0.0s)
+Then It should have a backlog
+-&gt; done: ProjectSteps.ThenItShouldHaveABacklog() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="798dffe8-36ea-46f5-99d1-ba9a1f987e58" testId="9bcca343-b7e7-300b-ae17-436385c1fe2d" testName="AProjectShouldHaveAName" computerName="GABY-PC" duration="00:00:00.0045434" startTime="2012-08-06T16:18:38.5940000-03:00" endTime="2012-08-06T16:18:38.6030000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="798dffe8-36ea-46f5-99d1-ba9a1f987e58">
+      <Output>
+        <StdOut>Given I have a project
+-&gt; done: ProjectSteps.GivenIHaveAProject() (0.0s)
+Then I should be hable to assign a name to it
+-&gt; done: ProjectSteps.ThenIShouldBeHableToAssignANameToIt() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2a53192a-5012-4bce-8213-9a56b0b1fe27" testId="f392da82-59ca-fea6-4780-6cc0fd467d1b" testName="ANewUserStoryShouldStartWithATemplate" computerName="GABY-PC" duration="00:00:00.0069570" startTime="2012-08-06T16:18:38.6050000-03:00" endTime="2012-08-06T16:18:38.6160000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2a53192a-5012-4bce-8213-9a56b0b1fe27">
+      <Output>
+        <StdOut>When I create a new story
+-&gt; pending: UserStorySteps.WhenICreateANewStory()
+Then the story should follow this template 'As a &lt;role&gt;, I want &lt;goal/desire&gt; so that &lt;benefit&gt;'
+-&gt; skipped because of previous errors</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. One or more step definitions are not implemented yet.
+  UserStorySteps.WhenICreateANewStory()</Message>
+          <StackTrace>   at lambda_method(Closure , String , Object[] )
+   at TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestInconclusive(String message)
+   at TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestPending(String message)
+   at TechTalk.SpecFlow.ErrorHandling.ErrorProvider.ThrowPendingError(TestStatus testStatus, String message)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ScrumBoard.Specs.UserStoryFeature.ScenarioCleanup() in D:\GL\Scrum\ScrumBoard\Tests\Specs\UserStory.feature.cs:line 0
+   at ScrumBoard.Specs.UserStoryFeature.ANewUserStoryShouldStartWithATemplate() in d:\GL\Scrum\ScrumBoard\Tests\Specs\UserStory.feature:line 16
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="69ac773a-bc73-450d-9409-f18074f59920" testId="f731888a-5818-2b1b-6db1-9a6cb9294436" testName="AStoryShouldHaveAUniqueKey" computerName="GABY-PC" duration="00:00:00.0021631" startTime="2012-08-06T16:18:38.6180000-03:00" endTime="2012-08-06T16:18:38.6250000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="69ac773a-bc73-450d-9409-f18074f59920">
+      <Output>
+        <StdOut>Given I have a story
+-&gt; pending: UserStorySteps.GivenIHaveAStory()
+Then I should be hable to uniquely identify it
+-&gt; skipped because of previous errors</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. One or more step definitions are not implemented yet.
+  UserStorySteps.GivenIHaveAStory()</Message>
+          <StackTrace>   at lambda_method(Closure , String , Object[] )
+   at TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestInconclusive(String message)
+   at TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestPending(String message)
+   at TechTalk.SpecFlow.ErrorHandling.ErrorProvider.ThrowPendingError(TestStatus testStatus, String message)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ScrumBoard.Specs.UserStoryFeature.ScenarioCleanup() in D:\GL\Scrum\ScrumBoard\Tests\Specs\UserStory.feature.cs:line 0
+   at ScrumBoard.Specs.UserStoryFeature.AStoryShouldHaveAUniqueKey() in d:\GL\Scrum\ScrumBoard\Tests\Specs\UserStory.feature:line 8
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,0 +1,22 @@
+# Build Folders 
+bin
+obj
+
+# mstest test results
+TestResults
+
+# User Files
+*.user
+*.suo 
+
+#Resharper
+_ReSharper.* 
+
+#nuget packages
+packages 
+
+#Cahes
+StyleCop.Cache 
+Thumbs.db 
+
+aspnet_client 

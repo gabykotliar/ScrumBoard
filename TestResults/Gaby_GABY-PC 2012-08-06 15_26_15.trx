@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="d2de23dc-dac3-436b-8737-16e5fdd0a641" name="Gaby@GABY-PC 2012-08-06 15:26:15" runUser="Gaby-PC\Gaby" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="314ea883-3442-48a7-a1fa-f8f9c03203bb">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Gaby_GABY-PC 2012-08-06 15_26_15">
+      <DeploymentItem filename="D:\GL\Scrum\ScrumBoard\Domain\bin\Debug\ScrumBoard.Domain.dll" />
+      <DeploymentItem filename="D:\GL\Scrum\ScrumBoard\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll" />
+      <DeploymentItem filename="D:\GL\Scrum\ScrumBoard\packages\FluentAssertions.1.7.1.1\Lib\net40\FluentAssertions.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-08-06T15:26:15.3650000-03:00" queuing="2012-08-06T15:26:15.4470000-03:00" start="2012-08-06T15:26:15.4630000-03:00" finish="2012-08-06T15:26:16.0140000-03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="3" executed="3" passed="2" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AProjectShouldHaveAName" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="9bcca343-b7e7-300b-ae17-436385c1fe2d">
+      <Description>A project should have a name</Description>
+      <Execution id="e22d18b0-d6b6-40f2-9ba0-4392075562d3" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Project</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProjectFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AProjectShouldHaveAName" />
+    </UnitTest>
+    <UnitTest name="AddUserStory" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="6dc10f22-9326-1114-4aac-09d13f12d7a3">
+      <Description>Add User Story</Description>
+      <Execution id="835eb6e5-230d-4bef-84c7-6613d8f6c62f" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Product Backlog</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProductBacklogFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddUserStory" />
+    </UnitTest>
+    <UnitTest name="AProjectShouldHaveABacklog" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="6ebe4eec-fbe9-caaf-0a7f-0a6912e407ef">
+      <Description>A project should have a backlog</Description>
+      <Execution id="e2bdd8c7-3af2-4e49-a1ba-6596c283fb95" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Project</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProjectFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AProjectShouldHaveABacklog" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="6dc10f22-9326-1114-4aac-09d13f12d7a3" executionId="835eb6e5-230d-4bef-84c7-6613d8f6c62f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ebe4eec-fbe9-caaf-0a7f-0a6912e407ef" executionId="e2bdd8c7-3af2-4e49-a1ba-6596c283fb95" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9bcca343-b7e7-300b-ae17-436385c1fe2d" executionId="e22d18b0-d6b6-40f2-9ba0-4392075562d3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="835eb6e5-230d-4bef-84c7-6613d8f6c62f" testId="6dc10f22-9326-1114-4aac-09d13f12d7a3" testName="AddUserStory" computerName="GABY-PC" duration="00:00:00.0752812" startTime="2012-08-06T15:26:15.4660000-03:00" endTime="2012-08-06T15:26:15.9410000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="835eb6e5-230d-4bef-84c7-6613d8f6c62f">
+      <Output>
+        <StdOut>Given I have a Product Backlog
+-&gt; done: ProductBacklogSteps.GivenIHaveAProductBacklog() (0.0s)
+Then I should be able to add a User Story
+-&gt; done: ProductBacklogSteps.ThenIShouldBeAbleToAddAUserStory() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e2bdd8c7-3af2-4e49-a1ba-6596c283fb95" testId="6ebe4eec-fbe9-caaf-0a7f-0a6912e407ef" testName="AProjectShouldHaveABacklog" computerName="GABY-PC" duration="00:00:00.0225868" startTime="2012-08-06T15:26:15.9450000-03:00" endTime="2012-08-06T15:26:15.9770000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e2bdd8c7-3af2-4e49-a1ba-6596c283fb95">
+      <Output>
+        <StdOut>Given I have a project
+-&gt; done: ProjectSteps.GivenIHaveAProject() (0.0s)
+Then It should have a backlog
+-&gt; error: Expected collection not to be &lt;null&gt;.</StdOut>
+        <ErrorInfo>
+          <Message>Expected collection not to be &lt;null&gt;.</Message>
+          <StackTrace>   at FluentAssertions.Frameworks.LateBoundTestFramework.Throw(String message) in c:\Workspaces\FluentAssertions\Releases\1.7.0\FluentAssertions.Net35\Frameworks\LateBoundTestFramework.cs:line 21
+   at FluentAssertions.Verification.FailWith(String failureMessage, Object[] failureArgs) in c:\Workspaces\FluentAssertions\Releases\1.7.0\FluentAssertions.Net35\Verification.cs:line 158
+   at FluentAssertions.Assertions.CollectionAssertions`2.NotBeNull(String reason, Object[] reasonArgs) in c:\Workspaces\FluentAssertions\Releases\1.7.0\FluentAssertions.Net35\Assertions\CollectionAssertions.cs:line 888
+   at FluentAssertions.Assertions.CollectionAssertions`2.NotBeNull() in c:\Workspaces\FluentAssertions\Releases\1.7.0\FluentAssertions.Net35\Assertions\CollectionAssertions.cs:line 871
+   at ScrumBoard.Specs.ProjectSteps.ThenItShouldHaveABacklog() in D:\GL\Scrum\ScrumBoard\Tests\Specs\ProjectSteps.cs:line 29
+   at lambda_method(Closure , IContextManager )
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ScrumBoard.Specs.ProjectFeature.ScenarioCleanup() in D:\GL\Scrum\ScrumBoard\Tests\Specs\Project.feature.cs:line 0
+   at ScrumBoard.Specs.ProjectFeature.AProjectShouldHaveABacklog() in d:\GL\Scrum\ScrumBoard\Tests\Specs\Project.feature:line 12
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e22d18b0-d6b6-40f2-9ba0-4392075562d3" testId="9bcca343-b7e7-300b-ae17-436385c1fe2d" testName="AProjectShouldHaveAName" computerName="GABY-PC" duration="00:00:00.0038599" startTime="2012-08-06T15:26:15.9860000-03:00" endTime="2012-08-06T15:26:15.9930000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e22d18b0-d6b6-40f2-9ba0-4392075562d3">
+      <Output>
+        <StdOut>Given I have a project
+-&gt; done: ProjectSteps.GivenIHaveAProject() (0.0s)
+Then I should be hable to assign a name to it
+-&gt; done: ProjectSteps.ThenIShouldBeHableToAssignANameToIt() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="a0debd4e-33e3-4114-b102-8b078225d3d3" name="Gaby@GABY-PC 2012-08-06 16:53:12" runUser="Gaby-PC\Gaby" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="3e63d75b-78a2-406f-adf7-4f4baab97edb">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="Gaby_GABY-PC 2012-08-06 16_53_12" />
+  </TestSettings>
+  <Times creation="2012-08-06T16:53:12.3620000-03:00" queuing="2012-08-06T16:53:13.0500000-03:00" start="2012-08-06T16:53:13.5510000-03:00" finish="2012-08-06T16:53:14.6680000-03:00" />
+  <ResultSummary outcome="Inconclusive">
+    <Counters total="3" executed="3" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="2" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AUserStoryShouldHaveAText" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="4b3eaaf6-8324-41ab-054e-38d11d06c9d8">
+      <Description>A user story should have a text</Description>
+      <Execution timeOut="1800000" id="44bc692a-76c6-47fc-8e89-5a676ac7b5fc" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>UserStory</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.UserStoryFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AUserStoryShouldHaveAText" />
+    </UnitTest>
+    <UnitTest name="IShouldBeHableToUniquelyIdentifyAUserStory" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="a85e59b0-fb9e-dbc6-5ccf-2d106774cd5a">
+      <Description>I should be hable to uniquely identify a user story</Description>
+      <Execution timeOut="1800000" id="737edc78-31dc-4b69-912f-841fbf6b8d0a" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>UserStory</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.UserStoryFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IShouldBeHableToUniquelyIdentifyAUserStory" />
+    </UnitTest>
+    <UnitTest name="ANewUserStoryShouldStartWithATemplate" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="f392da82-59ca-fea6-4780-6cc0fd467d1b">
+      <Description>A new user story should start with a template</Description>
+      <Execution timeOut="1800000" id="d42ea87a-5c18-4f75-8d76-7ced86977bc0" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>UserStory</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.UserStoryFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ANewUserStoryShouldStartWithATemplate" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="f392da82-59ca-fea6-4780-6cc0fd467d1b" executionId="d42ea87a-5c18-4f75-8d76-7ced86977bc0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4b3eaaf6-8324-41ab-054e-38d11d06c9d8" executionId="44bc692a-76c6-47fc-8e89-5a676ac7b5fc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a85e59b0-fb9e-dbc6-5ccf-2d106774cd5a" executionId="737edc78-31dc-4b69-912f-841fbf6b8d0a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="d42ea87a-5c18-4f75-8d76-7ced86977bc0" testId="f392da82-59ca-fea6-4780-6cc0fd467d1b" testName="ANewUserStoryShouldStartWithATemplate" computerName="GABY-PC" duration="00:00:00.4998446" startTime="2012-08-06T16:53:13.6630000-03:00" endTime="2012-08-06T16:53:14.4910000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d42ea87a-5c18-4f75-8d76-7ced86977bc0">
+      <Output>
+        <StdOut>When I create a new story
+-&gt; pending: UserStorySteps.WhenICreateANewStory()
+Then the story should follow this template 'As a &lt;role&gt;, I want &lt;goal/desire&gt; so that &lt;benefit&gt;'
+-&gt; skipped because of previous errors</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. One or more step definitions are not implemented yet.
+  UserStorySteps.WhenICreateANewStory()</Message>
+          <StackTrace>   at lambda_method(Closure , String , Object[] )
+   at TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestInconclusive(String message)
+   at TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestPending(String message)
+   at TechTalk.SpecFlow.ErrorHandling.ErrorProvider.ThrowPendingError(TestStatus testStatus, String message)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ScrumBoard.Specs.UserStoryFeature.ScenarioCleanup() in D:\GL\Scrum\ScrumBoard\Tests\Specs\UserStory.feature.cs:line 0
+   at ScrumBoard.Specs.UserStoryFeature.ANewUserStoryShouldStartWithATemplate() in d:\GL\Scrum\ScrumBoard\Tests\Specs\UserStory.feature:line 16
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="44bc692a-76c6-47fc-8e89-5a676ac7b5fc" testId="4b3eaaf6-8324-41ab-054e-38d11d06c9d8" testName="AUserStoryShouldHaveAText" computerName="GABY-PC" duration="00:00:00.0491377" startTime="2012-08-06T16:53:14.4950000-03:00" endTime="2012-08-06T16:53:14.5450000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="44bc692a-76c6-47fc-8e89-5a676ac7b5fc">
+      <Output>
+        <StdOut>Given I have a story
+-&gt; done: UserStorySteps.GivenIHaveAStory() (0.0s)
+Then I should be hable to define its text
+-&gt; pending: UserStorySteps.ThenIShouldBeHableToDefineItsText()</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. One or more step definitions are not implemented yet.
+  UserStorySteps.ThenIShouldBeHableToDefineItsText()</Message>
+          <StackTrace>   at lambda_method(Closure , String , Object[] )
+   at TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestInconclusive(String message)
+   at TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestPending(String message)
+   at TechTalk.SpecFlow.ErrorHandling.ErrorProvider.ThrowPendingError(TestStatus testStatus, String message)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at ScrumBoard.Specs.UserStoryFeature.ScenarioCleanup() in D:\GL\Scrum\ScrumBoard\Tests\Specs\UserStory.feature.cs:line 0
+   at ScrumBoard.Specs.UserStoryFeature.AUserStoryShouldHaveAText() in d:\GL\Scrum\ScrumBoard\Tests\Specs\UserStory.feature:line 12
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="737edc78-31dc-4b69-912f-841fbf6b8d0a" testId="a85e59b0-fb9e-dbc6-5ccf-2d106774cd5a" testName="IShouldBeHableToUniquelyIdentifyAUserStory" computerName="GABY-PC" duration="00:00:00.0391552" startTime="2012-08-06T16:53:14.5480000-03:00" endTime="2012-08-06T16:53:14.5870000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="737edc78-31dc-4b69-912f-841fbf6b8d0a">
+      <Output>
+        <StdOut>Given I have a story
+-&gt; done: UserStorySteps.GivenIHaveAStory() (0.0s)
+Then It should have a unique key
+-&gt; done: GenericSteps.ThenIShouldBeHableToUniquelyIdentifyIt() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

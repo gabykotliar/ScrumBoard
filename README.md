@@ -1,4 +1,0 @@
-ScrumBoard
-==========
-
-ScrumBoard

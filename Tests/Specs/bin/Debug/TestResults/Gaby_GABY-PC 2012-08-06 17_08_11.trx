@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="071a5f04-0fdf-4fe3-942d-8d4f1eb76e5b" name="Gaby@GABY-PC 2012-08-06 17:08:11" runUser="Gaby-PC\Gaby" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="4add5e39-36dd-459a-80aa-01849c441bd5">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="Gaby_GABY-PC 2012-08-06 17_08_11" />
+  </TestSettings>
+  <Times creation="2012-08-06T17:08:11.8500000-03:00" queuing="2012-08-06T17:08:12.6990000-03:00" start="2012-08-06T17:08:13.2720000-03:00" finish="2012-08-06T17:08:14.2230000-03:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="3" executed="3" passed="3" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AProjectShouldHaveAName" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="9bcca343-b7e7-300b-ae17-436385c1fe2d">
+      <Description>A project should have a name</Description>
+      <Execution timeOut="1800000" id="094e1f19-8d0b-4c9c-89b8-62a2a2c86b02" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Project</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProjectFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AProjectShouldHaveAName" />
+    </UnitTest>
+    <UnitTest name="AProjectShouldHaveABacklog" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="6ebe4eec-fbe9-caaf-0a7f-0a6912e407ef">
+      <Description>A project should have a backlog</Description>
+      <Execution timeOut="1800000" id="9574dcd3-1f0f-46c3-bb86-320f279a0f6f" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Project</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProjectFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AProjectShouldHaveABacklog" />
+    </UnitTest>
+    <UnitTest name="IShouldBeHableToUniquelyIdentifyAProject" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="263d0a80-81bd-30ec-e60b-4219a627a337">
+      <Description>I should be hable to uniquely identify a project</Description>
+      <Execution timeOut="1800000" id="b5dbeb13-9d3f-44d0-93ae-72476d7279b7" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Project</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProjectFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IShouldBeHableToUniquelyIdentifyAProject" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="6ebe4eec-fbe9-caaf-0a7f-0a6912e407ef" executionId="9574dcd3-1f0f-46c3-bb86-320f279a0f6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9bcca343-b7e7-300b-ae17-436385c1fe2d" executionId="094e1f19-8d0b-4c9c-89b8-62a2a2c86b02" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="263d0a80-81bd-30ec-e60b-4219a627a337" executionId="b5dbeb13-9d3f-44d0-93ae-72476d7279b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="9574dcd3-1f0f-46c3-bb86-320f279a0f6f" testId="6ebe4eec-fbe9-caaf-0a7f-0a6912e407ef" testName="AProjectShouldHaveABacklog" computerName="GABY-PC" duration="00:00:00.3323771" startTime="2012-08-06T17:08:13.3260000-03:00" endTime="2012-08-06T17:08:14.0450000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9574dcd3-1f0f-46c3-bb86-320f279a0f6f">
+      <Output>
+        <StdOut>Given I have a project
+-&gt; done: ProjectSteps.GivenIHaveAProject() (0.0s)
+Then It should have a backlog
+-&gt; done: ProjectSteps.ThenItShouldHaveABacklog() (0.1s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="094e1f19-8d0b-4c9c-89b8-62a2a2c86b02" testId="9bcca343-b7e7-300b-ae17-436385c1fe2d" testName="AProjectShouldHaveAName" computerName="GABY-PC" duration="00:00:00.0054202" startTime="2012-08-06T17:08:14.0480000-03:00" endTime="2012-08-06T17:08:14.0630000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="094e1f19-8d0b-4c9c-89b8-62a2a2c86b02">
+      <Output>
+        <StdOut>Given I have a project
+-&gt; done: ProjectSteps.GivenIHaveAProject() (0.0s)
+Then I should be hable to assign a name to it
+-&gt; done: ProjectSteps.ThenIShouldBeHableToAssignANameToIt() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b5dbeb13-9d3f-44d0-93ae-72476d7279b7" testId="263d0a80-81bd-30ec-e60b-4219a627a337" testName="IShouldBeHableToUniquelyIdentifyAProject" computerName="GABY-PC" duration="00:00:00.0185800" startTime="2012-08-06T17:08:14.0650000-03:00" endTime="2012-08-06T17:08:14.1180000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b5dbeb13-9d3f-44d0-93ae-72476d7279b7">
+      <Output>
+        <StdOut>Given I have a project
+-&gt; done: ProjectSteps.GivenIHaveAProject() (0.0s)
+Then It should have a unique key
+-&gt; done: GenericSteps.ThenIShouldBeHableToUniquelyIdentifyIt() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

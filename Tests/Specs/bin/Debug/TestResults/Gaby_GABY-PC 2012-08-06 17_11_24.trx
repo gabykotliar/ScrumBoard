@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="d1a2a05b-a03b-48bb-ba73-c2607eaa94fd" name="Gaby@GABY-PC 2012-08-06 17:11:24" runUser="Gaby-PC\Gaby" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="9b005c02-9c3a-4749-91a9-d4b9f9e1f445">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="Gaby_GABY-PC 2012-08-06 17_11_24" />
+  </TestSettings>
+  <Times creation="2012-08-06T17:11:24.0110000-03:00" queuing="2012-08-06T17:11:24.8290000-03:00" start="2012-08-06T17:11:25.3890000-03:00" finish="2012-08-06T17:11:26.5210000-03:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AddUserStory" storage="d:\gl\scrum\scrumboard\tests\specs\bin\debug\scrumboard.specs.dll" id="6dc10f22-9326-1114-4aac-09d13f12d7a3">
+      <Description>Add User Story</Description>
+      <Execution timeOut="1800000" id="a2ef5506-9014-4e92-8ae8-ff826bee1775" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Product Backlog</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/GL/Scrum/ScrumBoard/Tests/Specs/bin/Debug/ScrumBoard.Specs.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ScrumBoard.Specs.ProductBacklogFeature, ScrumBoard.Specs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddUserStory" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="6dc10f22-9326-1114-4aac-09d13f12d7a3" executionId="a2ef5506-9014-4e92-8ae8-ff826bee1775" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="a2ef5506-9014-4e92-8ae8-ff826bee1775" testId="6dc10f22-9326-1114-4aac-09d13f12d7a3" testName="AddUserStory" computerName="GABY-PC" duration="00:00:00.4026989" startTime="2012-08-06T17:11:25.3950000-03:00" endTime="2012-08-06T17:11:26.4110000-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a2ef5506-9014-4e92-8ae8-ff826bee1775">
+      <Output>
+        <StdOut>Given I have a Product Backlog
+-&gt; done: ProductBacklogSteps.GivenIHaveAProductBacklog() (0.0s)
+Then I should be able to add a User Story
+-&gt; done: ProductBacklogSteps.ThenIShouldBeAbleToAddAUserStory() (0.1s)</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

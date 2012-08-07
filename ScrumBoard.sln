@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{922062ED-103C-41C2-AF95-DC73318A4E43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{38C0D54C-B9F4-4881-B29B-7A4F3936F40D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\nuget.exe = .nuget\nuget.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specs", "Tests\Specs\Specs.csproj", "{A201C704-ECCE-466E-935E-B4EC1CF0F579}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{89B969FF-80D8-4FAA-A680-8DBBFCAE5EA6}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		ScrumBoard.vsmdi = ScrumBoard.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests\Tests.csproj", "{E2A9ACF4-941E-4D74-9CA7-203F188057B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{9859E9CE-A36C-42CA-9E69-F88DB5B2B40B}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ScrumBoard.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A201C704-ECCE-466E-935E-B4EC1CF0F579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A201C704-ECCE-466E-935E-B4EC1CF0F579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A201C704-ECCE-466E-935E-B4EC1CF0F579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A201C704-ECCE-466E-935E-B4EC1CF0F579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A9ACF4-941E-4D74-9CA7-203F188057B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A9ACF4-941E-4D74-9CA7-203F188057B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A9ACF4-941E-4D74-9CA7-203F188057B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A9ACF4-941E-4D74-9CA7-203F188057B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9859E9CE-A36C-42CA-9E69-F88DB5B2B40B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9859E9CE-A36C-42CA-9E69-F88DB5B2B40B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9859E9CE-A36C-42CA-9E69-F88DB5B2B40B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9859E9CE-A36C-42CA-9E69-F88DB5B2B40B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A201C704-ECCE-466E-935E-B4EC1CF0F579} = {922062ED-103C-41C2-AF95-DC73318A4E43}
+		{89B969FF-80D8-4FAA-A680-8DBBFCAE5EA6} = {922062ED-103C-41C2-AF95-DC73318A4E43}
+		{E2A9ACF4-941E-4D74-9CA7-203F188057B5} = {922062ED-103C-41C2-AF95-DC73318A4E43}
+	EndGlobalSection
+EndGlobal

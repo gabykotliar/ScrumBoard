@@ -1,0 +1,197 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="38C0D54C-B9F4-4881-B29B-7A4F3936F40D/f:NuGet.Config/l:D!?GL?Scrum?ScrumBoard?.nuget?NuGet.Config" caret="0" fromTop="0" />
+      <File id="38C0D54C-B9F4-4881-B29B-7A4F3936F40D/f:NuGet.targets/l:D!?GL?Scrum?ScrumBoard?.nuget?NuGet.targets" caret="0" fromTop="0" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/f:App.config" caret="304" fromTop="8" />
+      <File id="9859E9CE-A36C-42CA-9E69-F88DB5B2B40B/f:Project.cs" caret="0" fromTop="0" />
+      <File id="9859E9CE-A36C-42CA-9E69-F88DB5B2B40B/f:ProductBacklog.cs" caret="0" fromTop="0" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:ProjectSteps.cs" caret="698" fromTop="24" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:ProductBacklogSteps.cs" caret="641" fromTop="24" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/f:UserStory.feature.cs" caret="0" fromTop="0" />
+      <File id="9859E9CE-A36C-42CA-9E69-F88DB5B2B40B/f:UserStory.cs" caret="301" fromTop="14" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/f:Project.feature.cs" caret="0" fromTop="0" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/f:Project.feature" caret="463" fromTop="16" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/f:ProductBacklog.feature.cs" caret="0" fromTop="0" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/f:ProductBacklog.feature" caret="233" fromTop="7" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:UserStorySteps.cs" caret="1058" fromTop="25" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/f:UserStory.feature" caret="643" fromTop="18" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:GenericSteps.cs" caret="59" fromTop="2" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Helpers/f:PropertyValidator.cs" caret="746" fromTop="25" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:UserStorySteps.cs" caret="203" fromTop="8" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:UserStorySteps.cs" caret="1179" fromTop="38" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:UserStorySteps.cs" caret="1070" fromTop="39" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:UserStorySteps.cs" caret="392" fromTop="15" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:ProjectSteps.cs" caret="397" fromTop="15" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:ProjectSteps.cs" caret="866" fromTop="30" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:GenericSteps.cs" caret="700" fromTop="37" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:GenericSteps.cs" caret="689" fromTop="27" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/f:Project.feature" caret="217" fromTop="7" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/f:UserStory.feature" caret="183" fromTop="5" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:UserStorySteps.cs" caret="832" fromTop="31" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:UserStorySteps.cs" caret="996" fromTop="35" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:UserStorySteps.cs" caret="549" fromTop="21" />
+      <File id="9859E9CE-A36C-42CA-9E69-F88DB5B2B40B/f:UserStory.cs" caret="126" fromTop="8" />
+      <File id="9859E9CE-A36C-42CA-9E69-F88DB5B2B40B/f:UserStory.cs" caret="0" fromTop="0" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:GenericSteps.cs" caret="700" fromTop="23" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:GenericSteps.cs" caret="700" fromTop="22" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:GenericSteps.cs" caret="700" fromTop="23" />
+      <File id="9859E9CE-A36C-42CA-9E69-F88DB5B2B40B/f:UserStory.cs" caret="301" fromTop="14" />
+      <File id="9859E9CE-A36C-42CA-9E69-F88DB5B2B40B/f:UserStory.cs" caret="209" fromTop="9" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/f:UserStory.feature" caret="703" fromTop="19" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Helpers/f:PropertyValidator.cs" caret="1237" fromTop="44" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Helpers/f:PropertyValidator.cs" caret="1130" fromTop="40" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Helpers/f:PropertyValidator.cs" caret="330" fromTop="14" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Helpers/f:PropertyValidator.cs" caret="41" fromTop="2" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Helpers/f:PropertyValidator.cs" caret="623" fromTop="22" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Helpers/f:PropertyValidator.cs" caret="771" fromTop="27" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:GenericSteps.cs" caret="397" fromTop="15" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:GenericSteps.cs" caret="700" fromTop="26" />
+      <File id="A201C704-ECCE-466E-935E-B4EC1CF0F579/d:Steps/f:GenericSteps.cs" caret="0" fromTop="0" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="private" priority="3" />
+      <Item value="ProductBacklogSteps`0" priority="0" />
+      <Item value="_backlog" priority="0" />
+      <Item value="backlog" priority="4" />
+      <Item value="new" priority="7" />
+      <Item value="ProductBacklog" priority="1" />
+      <Item value="UserStory`0" priority="1" />
+      <Item value="var" priority="4" />
+      <Item value="target" priority="2" />
+      <Item value="using" priority="1" />
+      <Item value="FluentAssertions" priority="1" />
+      <Item value="ProjectSteps`0" priority="0" />
+      <Item value="project" priority="6" />
+      <Item value="Project" priority="0" />
+      <Item value="expected" priority="3" />
+      <Item value="ProductBacklog`0" priority="0" />
+      <Item value="Backlog" priority="0" />
+      <Item value="virtual" priority="4" />
+      <Item value="UserStorySteps`0" priority="0" />
+      <Item value="story" priority="9" />
+      <Item value="UserStory" priority="1" />
+      <Item value="ScopeAttribute`0" priority="0" />
+      <Item value="Feature" priority="0" />
+      <Item value="ScenarioContext`0" priority="0" />
+      <Item value="object" priority="4" />
+      <Item value="public" priority="3" />
+      <Item value="static" priority="0" />
+      <Item value="void" priority="3" />
+      <Item value="entity" priority="7" />
+      <Item value="GenericSteps`0" priority="0" />
+      <Item value="type" priority="0" />
+      <Item value="idProperty" priority="3" />
+      <Item value="Virtual" priority="0" />
+      <Item value="PropertyAttributes`0" priority="1" />
+      <Item value="ShouldHave`1" priority="0" />
+      <Item value="property" priority="1" />
+      <Item value="value" priority="1" />
+      <Item value="p0" priority="0" />
+      <Item value="Text" priority="0" />
+      <Item value="Type`0" priority="1" />
+      <Item value="string" priority="3" />
+      <Item value="this" priority="1" />
+      <Item value="propertyInfo" priority="6" />
+      <Item value="entityType" priority="0" />
+      <Item value="name" priority="2" />
+      <Item value="message" priority="1" />
+      <Item value="T`0" priority="0" />
+      <Item value="default" priority="0" />
+      <Item value="int" priority="0" />
+      <Item value="validator" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ScrumBoard.Domain.ProductBacklog">
+      <Item value="Exists`0" priority="0" />
+      <Item value="Should`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentAssertions.Assertions.GenericCollectionAssertions`1">
+      <Item value="Contain`0" priority="0" />
+      <Item value="NotBeNull`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ScrumBoard.Domain.Project">
+      <Item value="Name" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Should`1" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentAssertions.Assertions.StringAssertions">
+      <Item value="Be`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TechTalk.SpecFlow.ScenarioContext">
+      <Item value="Current" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TechTalk.SpecFlow.ScenarioContext">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ScrumBoard.Specs.Steps.GenericSteps">
+      <Item value="StoreEntityForCurrentScenario`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="GetType`0" priority="1" />
+      <Item value="Should`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="GetProperty`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentAssertions.Assertions.ObjectAssertions">
+      <Item value="NotBeNull`0" priority="0" />
+      <Item value="Be`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.PropertyInfo">
+      <Item value="Should`0" priority="0" />
+      <Item value="Attributes" priority="0" />
+      <Item value="GetGetMethod`0" priority="0" />
+      <Item value="GetSetMethod`0" priority="0" />
+      <Item value="SetValue`0" priority="0" />
+      <Item value="GetValue`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.PropertyAttributes">
+      <Item value="Reserved2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.MethodInfo">
+      <Item value="IsVirtual" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Boolean">
+      <Item value="Should`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentAssertions.Assertions.BooleanAssertions">
+      <Item value="BeTrue`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ScrumBoard.Domain.UserStory">
+      <Item value="Text" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ScrumBoard.Specs.Helpers.PropertyValidator`1">
+      <Item value="entity" priority="0" />
+      <Item value="entityType" priority="0" />
+      <Item value="CheckExistance`0" priority="0" />
+      <Item value="CheckIfVirtual`0" priority="0" />
+      <Item value="CheckStandardSetAndGetBehaviour`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format`0" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
