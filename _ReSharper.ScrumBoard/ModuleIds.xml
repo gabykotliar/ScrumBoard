@@ -1,5 +1,0 @@
-<Modules>
-  <Module PersistentId="A201C704-ECCE-466E-935E-B4EC1CF0F579" ModuleId="Specs" />
-  <Module PersistentId="E2A9ACF4-941E-4D74-9CA7-203F188057B5" ModuleId="Tests" />
-  <Module PersistentId="9859E9CE-A36C-42CA-9E69-F88DB5B2B40B" ModuleId="Domain" />
-</Modules>
