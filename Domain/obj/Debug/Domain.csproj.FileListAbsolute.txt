@@ -1,4 +1,0 @@
-D:\GL\Scrum\ScrumBoard\Domain\bin\Debug\ScrumBoard.Domain.dll
-D:\GL\Scrum\ScrumBoard\Domain\bin\Debug\ScrumBoard.Domain.pdb
-D:\GL\Scrum\ScrumBoard\Domain\obj\Debug\ScrumBoard.Domain.dll
-D:\GL\Scrum\ScrumBoard\Domain\obj\Debug\ScrumBoard.Domain.pdb
