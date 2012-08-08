@@ -40,7 +40,7 @@ publish
 *.suo 
 
 #Resharper
-_ReSharper* 
+_ReSharper*
 
 #nuget packages
 packages/
