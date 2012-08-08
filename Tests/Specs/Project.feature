@@ -14,3 +14,7 @@ Scenario: A project should have a name
 Scenario: A project should have a backlog
 	Given I have a project	
 	Then It should have a backlog
+
+Scenario: A project should have sprints
+	Given I have a project
+	Then It should have a sprint collection

@@ -56,6 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\PropertyValidator.cs" />
+    <Compile Include="Sprint.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sprint.feature</DependentUpon>
+    </Compile>
     <Compile Include="Steps\GenericSteps.cs" />
     <Compile Include="Steps\ProductBacklogSteps.cs" />
     <Compile Include="Project.feature.cs">
@@ -70,6 +75,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductBacklog.feature</DependentUpon>
     </Compile>
+    <Compile Include="Steps\SprintSteps.cs" />
     <Compile Include="UserStory.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -83,6 +89,10 @@
     <None Include="Project.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Project.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Sprint.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Sprint.feature.cs</LastGenOutput>
     </None>
     <None Include="UserStory.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

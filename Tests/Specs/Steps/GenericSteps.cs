@@ -1,4 +1,5 @@
-﻿using ScrumBoard.Specs.Helpers;
+﻿using System;
+using ScrumBoard.Specs.Helpers;
 using TechTalk.SpecFlow;
 
 namespace ScrumBoard.Specs.Steps
@@ -21,6 +22,28 @@ namespace ScrumBoard.Specs.Steps
             validator.CheckExistance();
             validator.CheckIfVirtual();
             validator.CheckStandardSetAndGetBehaviour();
+        }
+
+        private static void ThenIShouldBeAbleToAssignAnAsType<T>(string propertyName)
+        {
+            var entity = ScenarioContext.Current["entity"];
+
+            var validator = new PropertyValidator<T>(propertyName, entity);
+
+            validator.CheckExistance();
+            validator.CheckStandardSetAndGetBehaviour();
+        }
+
+        [Then(@"I should be able to assign an '(.*)' as integer")]
+        public void ThenIShouldBeAbleToAssignAnAsInteger(string propertyName)
+        {
+            ThenIShouldBeAbleToAssignAnAsType<int>(propertyName);
+        }
+
+        [Then(@"I should be able to assign an '(.*)' as date")]
+        public void ThenIShouldBeAbleToAssignAnAsDate(string propertyName)
+        {
+            ThenIShouldBeAbleToAssignAnAsType<DateTime>(propertyName);
         }
     }
 }

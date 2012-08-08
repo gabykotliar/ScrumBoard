@@ -29,5 +29,11 @@ namespace ScrumBoard.Specs.Steps
         {
             project.Backlog.Should().NotBeNull();
         }
+
+        [Then(@"It should have a sprint collection")]
+        public void ThenItShouldHaveASprintCollection()
+        {
+            project.Sprints.Should().NotBeNull();
+        }
     }
 }
