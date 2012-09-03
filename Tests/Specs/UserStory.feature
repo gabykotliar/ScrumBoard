@@ -23,3 +23,4 @@ Scenario: I should be able to tell if a story is completed
 	Given I have a story
 	When It is DONE
 	Then The story is completed
+

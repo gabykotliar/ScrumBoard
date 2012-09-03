@@ -18,4 +18,3 @@ Scenario: A sprint have a commited effort
 
 Scenario: A sprint has a velocity
 	Given I have a sprint
-	Then 
