@@ -34,16 +34,28 @@ namespace ScrumBoard.Specs.Steps
             validator.CheckStandardSetAndGetBehaviour();
         }
 
-        [Then(@"I should be able to assign an '(.*)' as integer")]
+        [Then(@"I should be able to assign a '(.*)' as a number with no decimal places")]
         public void ThenIShouldBeAbleToAssignAnAsInteger(string propertyName)
         {
             ThenIShouldBeAbleToAssignAnAsType<int>(propertyName);
         }
 
-        [Then(@"I should be able to assign an '(.*)' as date")]
+        [Then(@"I should be able to assign a '(.*)' as a number with decimal places")]
+        public void ThenIShouldBeAbleToAssignAnAsDouble(string propertyName)
+        {
+            ThenIShouldBeAbleToAssignAnAsType<double>(propertyName);
+        }
+
+        [Then(@"I should be able to assign a '(.*)' as a date")]
         public void ThenIShouldBeAbleToAssignAnAsDate(string propertyName)
         {
             ThenIShouldBeAbleToAssignAnAsType<DateTime>(propertyName);
+        }
+
+        [Then(@"I should be able to assign a '(.*)' as a text")]
+        public void ThenIShouldBeAbleToAssignAnAsString(string propertyName)
+        {
+            ThenIShouldBeAbleToAssignAnAsType<string>(propertyName);
         }
     }
 }

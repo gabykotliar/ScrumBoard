@@ -11,6 +11,8 @@
 
         public virtual string Text { get; set; }
 
-        public int Effort { get; set; }
+        public virtual double Effort { get; set; }
+
+        public virtual bool IsDone { get; set; }
     }
 }

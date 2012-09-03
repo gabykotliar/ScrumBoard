@@ -16,14 +16,6 @@ namespace ScrumBoard.Specs.Steps
             GenericSteps.StoreEntityForCurrentScenario(project);
         }
         
-        [Then(@"I should be hable to assign a name to it")]
-        public void ThenIShouldBeHableToAssignANameToIt()
-        {
-            const string expected = "someName";
-            project.Name = expected;
-            project.Name.Should().Be(expected);
-        }
-
         [Then(@"It should have a backlog")]
         public void ThenItShouldHaveABacklog()
         {
@@ -34,6 +26,12 @@ namespace ScrumBoard.Specs.Steps
         public void ThenItShouldHaveASprintCollection()
         {
             project.Sprints.Should().NotBeNull();
+        }
+
+        [Then(@"It should have a team")]
+        public void ThenItShouldHaveATeam()
+        {
+            project.Team.Should().NotBeNull();
         }
     }
 }

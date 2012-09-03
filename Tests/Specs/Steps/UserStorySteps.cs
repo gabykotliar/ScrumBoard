@@ -22,8 +22,8 @@ namespace ScrumBoard.Specs.Steps
             story = new UserStory();
         }
         
-        [Then(@"I should be hable to define its text")]
-        public void ThenIShouldBeHableToDefineItsText()
+        [Then(@"I should be able to define its text")]
+        public void ThenIShouldBeAbleToDefineItsText()
         {
             const string expected = "some text";
 
@@ -37,5 +37,18 @@ namespace ScrumBoard.Specs.Steps
         {
             story.Text.Should().Be(defaultValue);
         }
+
+        [When(@"It is DONE")]
+        public void WhenItIsDone()
+        {
+            story.IsDone = true;
+        }
+
+        [Then(@"The story is completed")]
+        public void ThenTheStoryIsCompleted()
+        {
+            story.IsDone.Should().BeTrue();
+        }
+
     }
 }

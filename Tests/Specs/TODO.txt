@@ -1,0 +1,7 @@
+﻿1.	DONE (suggested solution)	
+	General test steps created as "I should be able to assign {propertyName} as <type>" where create to be reused in different scenarios that expect some property
+	to be on a Class. Even when this is a good solution from the code point of view because it reduces the amount of code writen it has a problem. The problem is
+	that the scenario definition (that is a functional definition) is especifing the Type of a property. 
+	A posible solution will be to change the type name for something that is not that related to code. ie: change Integer for number with no decimal or string by
+	sequence of characters or text.
+	

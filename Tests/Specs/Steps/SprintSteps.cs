@@ -1,4 +1,6 @@
-﻿using ScrumBoard.Domain;
+﻿using System.Collections.Generic;
+using FluentAssertions;
+using ScrumBoard.Domain;
 
 using TechTalk.SpecFlow;
 
@@ -16,10 +18,25 @@ namespace ScrumBoard.Specs.Steps
             GenericSteps.StoreEntityForCurrentScenario(sprint);
         }
 
-        [Then(@"'(.*)' should be always after '(.*)'")]
-        public void ThenYShouldBeAlwaysAfterX(string p0, string p1)
+        [Then(@"It should have a stories collection")]
+        public void ThenItShouldHaveAStoriesCollection()
         {
-            ScenarioContext.Current.Pending();
+            sprint.Stories.Should().NotBeNull();
+        }
+
+        [Then(@"The commited effort is the sum of the efforts of each story in the sprint")]
+        public void ThenTheCommitedEffortIsTheSumOfTheEffortsOfEachStoryInTheSprint()
+        {
+            sprint.Stories = new List<UserStory>
+                                 {
+                                     new UserStory {Effort = 0.5},
+                                     new UserStory {Effort = 2},
+                                     new UserStory {Effort = 2},
+                                     new UserStory {Effort = 4},
+                                     new UserStory {Effort = 5},
+                                 };
+
+            sprint.CommitedEffort.Should().BeLessOrEqualTo(13.5);
         }
     }
 }
