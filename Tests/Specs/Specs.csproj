@@ -82,10 +82,16 @@
     <Compile Include="Steps\ProjectSteps.cs" />
     <Compile Include="Steps\SprintSteps.cs" />
     <Compile Include="Steps\UserStorySteps.cs" />
+    <Compile Include="Steps\VelocitySteps.cs" />
     <Compile Include="UserStory1.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UserStory.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Velocity.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Velocity.feature</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +112,10 @@
     <None Include="UserStory.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>UserStory1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Velocity.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Velocity.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

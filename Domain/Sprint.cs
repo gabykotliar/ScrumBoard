@@ -21,5 +21,10 @@ namespace ScrumBoard.Domain
         {
             get { return Stories.Sum(s => s.Effort); }
         }
+
+        public virtual double Velocity
+        {
+            get { return Stories.Where(s => s.IsDone).Sum(s => s.Effort); }
+        }
     }
 }
