@@ -19,3 +19,4 @@ Scenario: A sprint have a commited effort
 Scenario: A sprint has a velocity
 	Given I have a sprint
 	Then the velocity is the sum of the efforts of the DONE stories
+
