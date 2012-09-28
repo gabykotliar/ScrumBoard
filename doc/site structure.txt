@@ -1,0 +1,24 @@
+home
+login
+	local
+	service login
+register
+account
+user_home
+	New project
+	project dashboard
+		Burndowns		
+		Sprints
+			Management
+				Releases / Increments
+			current
+				task board
+		Backlog
+			Story
+				UATs
+		Impediments
+		Retrospectives
+		Team
+		Edit project 
+			(vision, definition of DONE, etc)
+			Calendar (admin days off, etc)

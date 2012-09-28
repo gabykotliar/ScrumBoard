@@ -1,0 +1,98 @@
+++++++++++++++++++++++++++++
+LEGEND
+<tagName>.		html tag
+[link]			link	
+* 				ul.li
+/**/			notas al mockup 
+++++++++++++++++++++++++++++
+
+http://sb.com/Login
+
+hgroup.
+	h1. Log In
+
+section.
+	h2. Use a local account to log in
+	fieldset.
+		legend. Log in Form
+		label.user
+		input.password
+		checkbox. remember me
+		[submit]
+
+section.
+	h2. Use another service to log in
+	* [provider 1]
+	* [provider 2]
+	* [provider 3]
+	* [provider 4]
+
+---------------------------------------------------------------------
+http://sb.com/Login
+
+section.commands
+	[new project]
+
+h1. Projects
+* [Project 1]
+* [Project 2]
+* [Project 3]
+* [Project 4]
+* [Project 5]
+
+---------------------------------------------------------------------
+http://sb.com/project/<Project_Name>
+
+Nav.
+	* [Sprints]
+	* [Backlog]	
+	* [Team]
+	* [Release Plan]
+
+hgroup
+	h1.<Project Name>
+	h2.Dashboard
+
+section
+	h3.Vision
+		p. Lorem ipsum dolor sit amet, cons
+
+section
+	h3.Product Burndown
+		img.
+
+	h3.Sprint Burndown
+		img.
+
+section
+	h3.Velocity
+	p.<23>
+
+section
+	h3.Current Sprint
+	p.[<6>]
+
+section
+	h3.Stories
+		* Total <5>
+		* In Progress <2>
+		* Completed <1>
+	h3.Business Value
+		* Total <500>
+		* Completed <300>	
+		* Delivered <150>	
+
+---------------------------------------------------------------------
+http://sb.com/project/edit/<Project_Name>
+Vision
+Definition of done
+Project Calendar
+Schedules
+	daily time
+	retros date and time
+	planning date and time
+	review date and time
+	send notifications (yes/no)
+
+
+
