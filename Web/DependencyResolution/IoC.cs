@@ -15,20 +15,28 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using Common.Infrastructure.IoC.StructureMap;
 
 using StructureMap;
-namespace ScrumBoard.Web.DependencyResolution {
-    public static class IoC {
-        public static IContainer Initialize() {
-            ObjectFactory.Initialize(x =>
-                        {
-                            x.Scan(scan =>
-                                    {
-                                        scan.TheCallingAssembly();
-                                        scan.WithDefaultConventions();
-                                    });
-            //                x.For<IExample>().Use<Example>();
-                        });
+
+namespace ScrumBoard.Web.DependencyResolution 
+{
+    public static class IoC 
+    {
+        public static IContainer Initialize() 
+        {
+            ObjectFactory.Initialize(x => x.Scan(scan =>
+                {
+                    scan.TheCallingAssembly();
+
+                    scan.Assembly("ScrumBoard.Domain");
+
+                    scan.Convention<EquallyNamedTypeAndInterfaceConvention>();
+                    scan.Convention<ValidatorInterfaceNameConvention>();
+
+                    scan.WithDefaultConventions();
+                }));
+
             return ObjectFactory.Container;
         }
     }

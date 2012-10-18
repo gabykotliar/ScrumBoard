@@ -29,7 +29,7 @@ namespace ScrumBoard.Domain
     {
         public ProjectValidator()
         {
-            RuleFor(p => p.Name).NotEmpty();
+            RuleFor(p => p.Name).NotEmpty();            
         }
     }
 }

@@ -2,6 +2,8 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+
+using FluentValidation.Attributes;
 using FluentValidation.Mvc;
 using ScrumBoard.Web.App_Start;
 
@@ -22,7 +24,7 @@ namespace ScrumBoard.Web
             FluentValidationModelValidatorProvider.Configure(provider =>
                                                                  {
                                                                      provider.ValidatorFactory = new Domain.Validation.Infrastructure.ValidatorFactory();
-                                                                 });
+                                                                 });            
         }
     }
 }

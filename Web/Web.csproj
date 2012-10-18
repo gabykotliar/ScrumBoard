@@ -41,6 +41,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common.Infrastructure.IoC.StructureMap">
+      <HintPath>..\.References\Common.Infrastructure.IoC.StructureMap.dll</HintPath>
+    </Reference>
     <Reference Include="FluentValidation">
       <HintPath>..\packages\FluentValidation.3.4.6.0\lib\Net40\FluentValidation.dll</HintPath>
     </Reference>
