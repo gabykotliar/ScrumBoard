@@ -17,8 +17,10 @@
 
 using System.Web.Http;
 using System.Web.Mvc;
+
+using ScrumBoard.Web.App_Start.DependencyResolution;
+
 using StructureMap;
-using ScrumBoard.Web.DependencyResolution;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(ScrumBoard.Web.App_Start.StructuremapMvc), "Start")]
 

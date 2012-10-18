@@ -19,10 +19,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http.Dependencies;
+
 using Microsoft.Practices.ServiceLocation;
+
 using StructureMap;
 
-namespace ScrumBoard.Web.DependencyResolution
+namespace ScrumBoard.Web.App_Start.DependencyResolution
 {
     /// <summary>
     /// The structure map dependency scope.

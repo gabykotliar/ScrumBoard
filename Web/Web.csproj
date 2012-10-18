@@ -186,11 +186,12 @@
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\api\ProjectController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
-    <Compile Include="DependencyResolution\IoC.cs" />
-    <Compile Include="DependencyResolution\StructureMapDependencyResolver.cs" />
-    <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
+    <Compile Include="App_Start\DependencyResolution\IoC.cs" />
+    <Compile Include="App_Start\DependencyResolution\StructureMapDependencyResolver.cs" />
+    <Compile Include="App_Start\DependencyResolution\StructureMapDependencyScope.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -318,6 +319,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <!-- This ItemGroup was manually generated to hold the assemblies included by dependency injection that are not automatically copied to the output folder -->
+    <InjectedDependencies Include="$(SolutionDir)ServicesImpl\bin\$(ConfigurationName)\ScrumBoard.Services.Implementation.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Domain.Validation.Infrastructure\Domain.Validation.Infrastructure.csproj">
       <Project>{32B29ED0-5133-4173-A516-0D0B714330AB}</Project>
       <Name>Domain.Validation.Infrastructure</Name>
@@ -359,7 +364,13 @@
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
   </Target> -->
+  <Target Name="AfterBuild">
+    <Message Text="----------- Build Completed -----------" Importance="high">
+    </Message>
+    <Message Text="Copying injected dependency files." Importance="high">
+    </Message>
+    <Copy SourceFiles="@(InjectedDependencies)" DestinationFolder="$(TargetDir)">
+    </Copy>
+  </Target>
 </Project>

@@ -19,7 +19,7 @@ using Common.Infrastructure.IoC.StructureMap;
 
 using StructureMap;
 
-namespace ScrumBoard.Web.DependencyResolution 
+namespace ScrumBoard.Web.App_Start.DependencyResolution 
 {
     public static class IoC 
     {

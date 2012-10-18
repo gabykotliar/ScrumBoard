@@ -16,9 +16,10 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Web.Http.Dependencies;
+
 using StructureMap;
 
-namespace ScrumBoard.Web.DependencyResolution
+namespace ScrumBoard.Web.App_Start.DependencyResolution
 {
     /// <summary>
     /// The structure map dependency resolver.
