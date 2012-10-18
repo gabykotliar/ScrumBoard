@@ -41,6 +41,7 @@
       <HintPath>..\..\packages\FluentAssertions.1.7.1.1\Lib\net40\FluentAssertions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="TechTalk.SpecFlow">
@@ -93,6 +94,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Velocity.feature</DependentUpon>
     </Compile>
+    <Compile Include="Views\ProjectNew.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectNew.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steps\CreateANewProjectSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -117,11 +124,19 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Velocity.feature.cs</LastGenOutput>
     </None>
+    <None Include="Views\ProjectNew.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ProjectNew.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\Domain.csproj">
       <Project>{17721966-ceff-4d50-b591-1c0d4ff2abf5}</Project>
       <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Web\Web.csproj">
+      <Project>{9C26B4B2-4E24-4D45-94CA-24E73BE72096}</Project>
+      <Name>Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

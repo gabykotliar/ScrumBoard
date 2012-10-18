@@ -15,8 +15,3 @@ Scenario: The team should be able to compromise stories for a sprint
 Scenario: A sprint have a commited effort
 	Given I have a sprint
 	Then The commited effort is the sum of the efforts of each story in the sprint
-
-Scenario: A sprint has a velocity
-	Given I have a sprint
-	Then the velocity is the sum of the efforts of the DONE stories
-

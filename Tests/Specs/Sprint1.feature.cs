@@ -118,22 +118,6 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("A sprint has a velocity")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Sprint")]
-        public virtual void ASprintHasAVelocity()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A sprint has a velocity", ((string[])(null)));
-#line 19
-this.ScenarioSetup(scenarioInfo);
-#line 20
- testRunner.Given("I have a sprint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 21
- testRunner.Then("the velocity is the sum of the efforts of the DONE stories", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
     }
 }
 #pragma warning restore

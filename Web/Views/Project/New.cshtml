@@ -1,0 +1,33 @@
+﻿@model ScrumBoard.Domain.Project
+
+@{
+    ViewBag.Title = "New Project";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Create a new project.</h2>
+</hgroup>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Name, "Name")
+                @Html.TextBoxFor(m => m.Name)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Vision, "Vision")
+                @Html.TextAreaFor(m => m.Vision)
+            </li>
+        </ol>
+        <input type="submit" value="Create" />
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

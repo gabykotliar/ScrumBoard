@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using FluentValidation;
 
 namespace ScrumBoard.Domain
 {
@@ -22,5 +23,13 @@ namespace ScrumBoard.Domain
         public virtual IList<Sprint> Sprints { get; set; }
 
         public virtual Team Team { get; set; }
+    }
+
+    public class ProjectValidator : AbstractValidator<Project>
+    {
+        public ProjectValidator()
+        {
+            RuleFor(p => p.Name).NotEmpty();
+        }
     }
 }

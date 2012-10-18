@@ -33,5 +33,17 @@ namespace ScrumBoard.Specs.Steps
         {
             project.Team.Should().NotBeNull();
         }
+
+        [Given(@"A project with name '(.*)'")]
+        public void GivenAProjectWithName(string projectName)
+        {
+            project.Name = projectName;
+        }
+
+        [Then(@"The project is invalid")]
+        public void ThenTheProjectIsInvalid()
+        {
+            ScenarioContext.Current.Pending();
+        }
     }
 }
