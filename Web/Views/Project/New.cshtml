@@ -29,35 +29,20 @@
 }
 
 @section Scripts {
+
+    <script src="~/Scripts/Views.js"></script>
+
     @Scripts.Render("~/bundles/jqueryval")    
     
     <script type="text/javascript">
+        
         $(document).ready(function () {
 
-            $('#submit').click(function () {
-
-                var form = $('form');
-                
-                //if (!form.valid()) return false;
-
-                var data = form.serialize();
-
-                $.ajax({
-                    type: 'POST',
-                    data: data,
-                    url: '/api/project',
-                    accepts: 'JSON',
-                    context: this
-                })
-               .success(function (result) {
-                   window.location = '@Url.Action("Dashboard")' + '/' + result.Name;
-               })
-               .fail(function (jqXHR, textStatus, errorThrown) {
-                   alert(textStatus);
-               });
-
-                return false;                
+            var view = new Views.Project.New({
+                apiPostUrl: '/api/project',
+                successRedirectUrl: '@Url.Action("Dashboard")' + '/'
             });
+                       
         });
     </script>
 }
