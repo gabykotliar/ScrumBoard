@@ -24,10 +24,40 @@
                 @Html.TextAreaFor(m => m.Vision)
             </li>
         </ol>
-        <input type="submit" value="Create" />
+        <input id="submit" type="button" value="Create" />
     </fieldset>
 }
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")    
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#submit').click(function () {
+
+                var form = $('form');
+                
+                //if (!form.valid()) return false;
+
+                var data = form.serialize();
+
+                $.ajax({
+                    type: 'POST',
+                    data: data,
+                    url: '/api/project',
+                    accepts: 'JSON',
+                    context: this
+                })
+               .success(function (result) {
+                   window.location = '@Url.Action("Dashboard")' + '/' + result.Name;
+               })
+               .fail(function (jqXHR, textStatus, errorThrown) {
+                   alert(textStatus);
+               });
+
+                return false;                
+            });
+        });
+    </script>
 }

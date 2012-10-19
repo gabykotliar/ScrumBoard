@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -22,11 +23,17 @@ namespace ScrumBoard.Web.Controllers.api
         {
             return new Project();
         }
-
-        // POST api/project //[FromBody]string value
-        public void Post(Project project)
+        
+        public HttpResponseMessage Post(Project project)
         {
+            //TODO: fix this validation that is not working
+            if(!ModelState.IsValid) return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
+            //TODO: create project
+
+            project.Id = 1;
+
+            return Request.CreateResponse(HttpStatusCode.Created, project);
         }
 
         // PUT api/project/5
