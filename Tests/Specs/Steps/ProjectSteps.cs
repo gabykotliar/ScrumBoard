@@ -1,4 +1,6 @@
-﻿using ScrumBoard.Domain;
+﻿using FluentValidation;
+
+using ScrumBoard.Domain;
 using TechTalk.SpecFlow;
 using FluentAssertions;
 
@@ -7,7 +9,9 @@ namespace ScrumBoard.Specs.Steps
     [Binding]
     public class ProjectSteps
     {
-        private Project project; 
+        private Project project;
+
+        private readonly IValidator<Project> validator = new ProjectValidator();
 
         [Given(@"I have a project")]
         public void GivenIHaveAProject()
@@ -37,13 +41,13 @@ namespace ScrumBoard.Specs.Steps
         [Given(@"A project with name '(.*)'")]
         public void GivenAProjectWithName(string projectName)
         {
-            project.Name = projectName;
+            project = new Project { Name = projectName };
         }
 
         [Then(@"The project is invalid")]
         public void ThenTheProjectIsInvalid()
         {
-            ScenarioContext.Current.Pending();
+            validator.Validate(project).IsValid.Should().BeFalse();
         }
     }
 }
