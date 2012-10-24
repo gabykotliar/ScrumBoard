@@ -29,11 +29,11 @@ namespace ScrumBoard.Specs.Steps
         {
             sprint.Stories = new List<UserStory>
                                  {
-                                     new UserStory {Effort = 0.5},
-                                     new UserStory {Effort = 2},
-                                     new UserStory {Effort = 2},
-                                     new UserStory {Effort = 4},
-                                     new UserStory {Effort = 5},
+                                     new UserStory { Effort = 0.5 },
+                                     new UserStory { Effort = 2 },
+                                     new UserStory { Effort = 2 },
+                                     new UserStory { Effort = 4 },
+                                     new UserStory { Effort = 5 },
                                  };
 
             sprint.CommitedEffort.Should().BeLessOrEqualTo(13.5);

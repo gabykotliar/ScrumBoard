@@ -1,8 +1,7 @@
-﻿using FluentValidation;
-
+﻿using FluentAssertions;
+using FluentValidation;
 using ScrumBoard.Domain;
 using TechTalk.SpecFlow;
-using FluentAssertions;
 
 namespace ScrumBoard.Specs.Steps
 {
@@ -23,7 +22,7 @@ namespace ScrumBoard.Specs.Steps
         [Then(@"It should have a backlog")]
         public void ThenItShouldHaveABacklog()
         {
-            project.Backlog.Should().NotBeNull();
+            project.Backlog.Should().NotBeNull();            
         }
 
         [Then(@"It should have a sprint collection")]
@@ -47,7 +46,7 @@ namespace ScrumBoard.Specs.Steps
         [Then(@"The project is invalid")]
         public void ThenTheProjectIsInvalid()
         {
-            validator.Validate(project).IsValid.Should().BeFalse();
+            validator.Validate(project).IsValid.Should().BeFalse();            
         }
     }
 }

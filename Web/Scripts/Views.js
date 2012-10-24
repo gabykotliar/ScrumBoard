@@ -13,9 +13,6 @@ var Views;
             }
             New.prototype.post = function (event) {
                 var self = this;
-                if(!this.form.valid()) {
-                    return false;
-                }
                 var data = this.form.serialize();
                 $.ajax(this.options.apiPostUrl, {
                     type: 'POST',

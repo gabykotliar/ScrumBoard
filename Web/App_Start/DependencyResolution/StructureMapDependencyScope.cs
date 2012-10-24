@@ -48,7 +48,7 @@ namespace ScrumBoard.Web.App_Start.DependencyResolution
         /// <param name="container">
         /// The container.
         /// </param>
-        /// <exception cref="ArgumentNullException">
+        /// <exception cref="ArgumentNullException">Argument Null Exception
         /// </exception>
         public StructureMapDependencyScope(IContainer container)
         {

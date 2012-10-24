@@ -3,8 +3,6 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-using FluentValidation.Attributes;
-using FluentValidation.Mvc;
 using ScrumBoard.Web.App_Start;
 
 namespace ScrumBoard.Web
@@ -21,10 +19,14 @@ namespace ScrumBoard.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
 
-            FluentValidationModelValidatorProvider.Configure(provider =>
-                                                                 {
-                                                                     provider.ValidatorFactory = new Domain.Validation.Infrastructure.ValidatorFactory();
-                                                                 });            
+            var validatorFactory = new Domain.Validation.Infrastructure.ValidatorFactory();
+
+            FluentValidation.Mvc.FluentValidationModelValidatorProvider.Configure(provider => { provider.ValidatorFactory = validatorFactory; });
+            //FluentValidation.WebApi.FluentValidationModelValidatorProvider.Configure(provider => { provider.ValidatorFactory = validatorFactory; });
+
+            //var fvProvider = ModelValidatorProviders.Providers.OfType<FluentValidationModelValidatorProvider>().First();
+
+            //GlobalConfiguration.Configuration.Services.Add(typeof(System.Web.Http.Validation.ModelValidatorProvider), new FluentValidation.WebApi.FluentValidationModelValidatorProvider());
         }
     }
 }

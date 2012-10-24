@@ -24,10 +24,13 @@ using StructureMap;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(ScrumBoard.Web.App_Start.StructuremapMvc), "Start")]
 
-namespace ScrumBoard.Web.App_Start {
-    public static class StructuremapMvc {
-        public static void Start() {
-			IContainer container = IoC.Initialize();
+namespace ScrumBoard.Web.App_Start 
+{
+    public static class StructuremapMvc 
+    {
+        public static void Start() 
+        {
+            IContainer container = IoC.Initialize();
             DependencyResolver.SetResolver(new StructureMapDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new StructureMapDependencyResolver(container);
         }

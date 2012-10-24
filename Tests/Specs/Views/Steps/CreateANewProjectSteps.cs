@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
-using ScrumBoard.Domain;
+
+using FluentAssertions;
 using ScrumBoard.Web.Controllers;
 using TechTalk.SpecFlow;
-using FluentAssertions;
 
 namespace ScrumBoard.Specs.Views.Steps
 {

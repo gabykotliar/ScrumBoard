@@ -17,7 +17,7 @@ namespace ScrumBoard.Domain
 
         public virtual DateTime EndsAt { get; set; }
 
-        public  virtual List<UserStory> Stories { get; set; }
+        public virtual List<UserStory> Stories { get; set; }
 
         public virtual double CommitedEffort
         {

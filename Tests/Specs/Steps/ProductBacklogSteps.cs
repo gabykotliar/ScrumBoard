@@ -1,6 +1,6 @@
-﻿using ScrumBoard.Domain;
+﻿using FluentAssertions;
+using ScrumBoard.Domain;
 using TechTalk.SpecFlow;
-using FluentAssertions;
 
 namespace ScrumBoard.Specs.Steps
 {

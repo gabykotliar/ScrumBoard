@@ -25,7 +25,7 @@ namespace ScrumBoard.Specs.Steps
         [Then(@"I should be able to define its text")]
         public void ThenIShouldBeAbleToDefineItsText()
         {
-            const string expected = "some text";
+            string expected = "some text";
 
             story.Text = expected;
 
@@ -49,6 +49,5 @@ namespace ScrumBoard.Specs.Steps
         {
             story.IsDone.Should().BeTrue();
         }
-
     }
 }
