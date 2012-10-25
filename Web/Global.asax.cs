@@ -28,5 +28,6 @@ namespace ScrumBoard.Web
 
             //GlobalConfiguration.Configuration.Services.Add(typeof(System.Web.Http.Validation.ModelValidatorProvider), new FluentValidation.WebApi.FluentValidationModelValidatorProvider());
         }
+
     }
 }
