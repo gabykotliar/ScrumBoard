@@ -27,7 +27,7 @@ namespace ScrumBoard.Specs.Steps
         [Then(@"The commited effort is the sum of the efforts of each story in the sprint")]
         public void ThenTheCommitedEffortIsTheSumOfTheEffortsOfEachStoryInTheSprint()
         {
-            sprint.Stories.AddRange(new []
+            sprint.Stories.AddRange(new[]
                                          {
                                              new UserStory { Effort = 0.5 },
                                              new UserStory { Effort = 2 },
