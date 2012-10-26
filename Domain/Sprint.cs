@@ -17,9 +17,9 @@ namespace ScrumBoard.Domain
 
         public virtual DateTime EndsAt { get; set; }
 
-        public virtual List<UserStory> Stories { get; set; }
+        public virtual List<UserStory> Stories { get; protected set; }
 
-        public virtual double CommitedEffort
+        public virtual double CommittedEffort
         {
             get { return Stories.Sum(s => s.Effort); }
         }
@@ -34,7 +34,7 @@ namespace ScrumBoard.Domain
     {
         public SprintValidator()
         {
-            RuleFor(s => s.CommitedEffort).GreaterThanOrEqualTo(0);
+            RuleFor(s => s.CommittedEffort).GreaterThanOrEqualTo(0);
         }
     }
 }

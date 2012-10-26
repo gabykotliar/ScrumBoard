@@ -18,11 +18,11 @@ namespace ScrumBoard.Domain
 
         public virtual string Vision { get; set; }
 
-        public virtual ProductBacklog Backlog { get; set; }
+        public virtual ProductBacklog Backlog { get; private set; }
 
-        public virtual IList<Sprint> Sprints { get; set; }
+        public virtual IList<Sprint> Sprints { get; private set; }
 
-        public virtual Team Team { get; set; }
+        public virtual Team Team { get; protected set; }
     }
 
     public class ProjectValidator : AbstractValidator<Project>
