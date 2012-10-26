@@ -15,16 +15,6 @@
       <Output TaskParameter="FailedFiles" ItemName="Failures"/>
     </MSBuild.ExtensionPack.CodeQuality.StyleCop>
     <Message Text="Succeeded: $(AllPassed), Violations: $(Violations)" Importance="high"/>
-    <!-- FailedFile format is:
-        <ItemGroup>
-            <FailedFile Include="filename">
-                <CheckId>SA Rule Number</CheckId>
-                <RuleDescription>Rule Description</RuleDescription>
-                <RuleName>Rule Name</RuleName>
-                <LineNumber>Line the violation appears on</LineNumber>
-                <Message>SA violation message</Message>
-            </FailedFile>
-        </ItemGroup>-->
     <Message Text="%(Failures.Identity) - Failed on Line %(Failures.LineNumber). %(Failures.CheckId): %(Failures.Message)"/>
   </Target>
 </Project>
