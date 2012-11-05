@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using FluentValidation;
+using System.ComponentModel.DataAnnotations;
 
 namespace ScrumBoard.Domain
 {
@@ -14,6 +14,7 @@ namespace ScrumBoard.Domain
         
         public virtual int Id { get; set; }
 
+        [Required]
         public virtual string Name { get; set; }
 
         public virtual string Vision { get; set; }
@@ -23,13 +24,5 @@ namespace ScrumBoard.Domain
         public virtual IList<Sprint> Sprints { get; private set; }
 
         public virtual Team Team { get; protected set; }
-    }
-
-    public class ProjectValidator : AbstractValidator<Project>
-    {
-        public ProjectValidator()
-        {
-            RuleFor(p => p.Name).NotEmpty();            
-        }
     }
 }

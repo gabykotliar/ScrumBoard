@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Net;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 using ScrumBoard.Domain;
 
@@ -10,9 +8,9 @@ namespace ScrumBoard.Web.Controllers
     {
         public ActionResult Dashboard(string id)
         {
-            return View(new Project { Name = "My Project" });
+            return View(new Project { Name = string.Format("My Project ({0})", id) });
         }
-
+        
         public ActionResult New()
         {
             return View();

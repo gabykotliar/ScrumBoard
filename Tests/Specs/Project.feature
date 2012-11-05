@@ -28,5 +28,6 @@ Scenario: A project have a team that works on it
 	Then It should have a team
 
 Scenario: A project with empty name is invalid
-	Given A project with name ''
+	Given I have a project
+	And The project name is ''
 	Then The project is invalid

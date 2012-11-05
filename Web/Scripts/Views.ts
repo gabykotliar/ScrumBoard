@@ -30,12 +30,11 @@ module Views.Project
 
             var self = this;
 
-            // if (!this.form.valid()) return false;
+            if (!this.form.valid()) return false;
 
             var data = this.form.serialize();
 
             $.ajax(this.options.apiPostUrl,
-            //$.ajax('/project/new',
             {
                 type: 'POST',
                 data: data,                

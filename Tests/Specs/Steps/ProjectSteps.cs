@@ -1,5 +1,7 @@
-﻿using FluentAssertions;
-using FluentValidation;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
+using FluentAssertions;
 using ScrumBoard.Domain;
 using TechTalk.SpecFlow;
 
@@ -9,8 +11,6 @@ namespace ScrumBoard.Specs.Steps
     public class ProjectSteps
     {
         private Project project;
-
-        private readonly IValidator<Project> validator = new ProjectValidator();
 
         [Given(@"I have a project")]
         public void GivenIHaveAProject()
@@ -35,18 +35,21 @@ namespace ScrumBoard.Specs.Steps
         public void ThenItShouldHaveATeam()
         {
             project.Team.Should().NotBeNull();
-        }
+        }        
 
-        [Given(@"A project with name '(.*)'")]
-        public void GivenAProjectWithName(string projectName)
+        [Given(@"The project name is '(.*)'")]
+        public void GivenTheProjectNameIs(string name)
         {
-            project = new Project { Name = projectName };
+            project.Name = name;
         }
 
         [Then(@"The project is invalid")]
         public void ThenTheProjectIsInvalid()
         {
-            validator.Validate(project).IsValid.Should().BeFalse();            
+            var results = new List<ValidationResult>();
+            var context = new ValidationContext(project, null, null);
+
+            Validator.TryValidateObject(project, context, results).Should().BeFalse();
         }
     }
 }

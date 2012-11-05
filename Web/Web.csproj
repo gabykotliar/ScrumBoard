@@ -45,12 +45,6 @@
     <Reference Include="Common.Infrastructure.IoC.StructureMap">
       <HintPath>..\.References\Common.Infrastructure.IoC.StructureMap.dll</HintPath>
     </Reference>
-    <Reference Include="FluentValidation">
-      <HintPath>..\packages\FluentValidation.3.4.6.0\lib\Net40\FluentValidation.dll</HintPath>
-    </Reference>
-    <Reference Include="FluentValidation.Mvc">
-      <HintPath>..\packages\FluentValidation.MVC4.3.4.6.0\lib\Net40\FluentValidation.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -271,6 +265,9 @@
     <Content Include="Scripts\Views.js">
       <DependentUpon>Views.ts</DependentUpon>
     </Content>
+    <Content Include="Scripts\Views.min.js">
+      <DependentUpon>Views.ts</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -317,10 +314,6 @@
     <InjectedDependencies Include="$(SolutionDir)ServicesImpl\bin\$(ConfigurationName)\ScrumBoard.Services.Implementation.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domain.Validation.Infrastructure\Domain.Validation.Infrastructure.csproj">
-      <Project>{32B29ED0-5133-4173-A516-0D0B714330AB}</Project>
-      <Name>Domain.Validation.Infrastructure</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{17721966-CEFF-4D50-B591-1C0D4FF2ABF5}</Project>
       <Name>Domain</Name>
