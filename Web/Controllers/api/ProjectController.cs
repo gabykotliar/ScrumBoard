@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
@@ -22,7 +23,17 @@ namespace ScrumBoard.Web.Controllers.Api
 
             service.Create(project);
 
-            return Request.CreateResponse(HttpStatusCode.Created, project);
+            var response = Request.CreateResponse(HttpStatusCode.Created, project);
+            
+            //AddResourceLocation(project, response);
+
+            return response;
+        }
+
+        private void AddResourceLocation(Project project, HttpResponseMessage response)
+        {
+            string uri = Url.Link("DefaultApi", new { id = project.Id });
+            response.Headers.Location = new Uri(uri);
         }
     }
 }
