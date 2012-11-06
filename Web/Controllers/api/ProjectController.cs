@@ -10,7 +10,7 @@ namespace ScrumBoard.Web.Controllers.Api
 {
     public class ProjectController : ApiController
     {
-        private ProjectService service;
+        private readonly ProjectService service;
 
         public ProjectController(ProjectService service)
         {
@@ -25,7 +25,7 @@ namespace ScrumBoard.Web.Controllers.Api
 
             var response = Request.CreateResponse(HttpStatusCode.Created, project);
             
-            //AddResourceLocation(project, response);
+            AddResourceLocation(project, response);
 
             return response;
         }

@@ -6,7 +6,7 @@ namespace ScrumBoard.Services.Implementation
     {
         public void Create(Project project)
         {
-            throw new System.NotImplementedException();
+            project.Id = 1;
         }
     }
 }

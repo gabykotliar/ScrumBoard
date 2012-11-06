@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Controllers;
@@ -37,21 +38,27 @@ namespace ScrumBoard.Tests.Web.Api
 
             serviceMock.Setup(s => s.Create(project));
 
-            var ctx = CreateControllerContext();
             var controller = new ProjectController(serviceMock.Object);
 
-            controller.ControllerContext = ctx;
-            controller.Request = ctx.Request;
-            controller.Configuration = ctx.Configuration;
+            SetControllerContext(controller);
 
-            //controller.Request = new HttpRequestMessage(HttpMethod.Post, "http://server.com/foo");            
-            //controller.Configuration = controller.ControllerContext.Configuration;                       
+            controller.Request.Method = HttpMethod.Post;
+            controller.Request.RequestUri = new Uri("http://localhost/api/products");
 
             var response = controller.Post(project);
 
             serviceMock.Verify();
 
             response.StatusCode.Should().Be(HttpStatusCode.Created);
+        }
+
+        private void SetControllerContext(ApiController controller)
+        {
+            var ctx = CreateControllerContext();
+
+            controller.ControllerContext = ctx;
+            controller.Request = ctx.Request;
+            controller.Configuration = ctx.Configuration;
         }
 
         public HttpActionContext CreateActionContext(HttpControllerContext controllerContext = null, HttpActionDescriptor actionDescriptor = null)
@@ -64,12 +71,19 @@ namespace ScrumBoard.Tests.Web.Api
         public HttpControllerContext CreateControllerContext(HttpConfiguration configuration = null, IHttpController instance = null, IHttpRouteData routeData = null, HttpRequestMessage request = null)
         {
             HttpConfiguration config = configuration ?? new HttpConfiguration();
-            IHttpRouteData route = routeData ?? new HttpRouteData(new HttpRoute());
+
+            if (routeData == null )
+            {
+                var route = config.Routes.MapHttpRoute("DefaultApi", "api/{controller}/{id}");
+                routeData = new HttpRouteData(route);
+            }
+            
             HttpRequestMessage req = request ?? new HttpRequestMessage();
             req.Properties[HttpPropertyKeys.HttpConfigurationKey] = config;
-            req.Properties[HttpPropertyKeys.HttpRouteDataKey] = route;
+            req.Properties[HttpPropertyKeys.HttpRouteDataKey] = routeData;
 
-            var context = new HttpControllerContext(config, route, req);
+            var context = new HttpControllerContext(config, routeData, req);
+
             if (instance != null)
             {
                 context.Controller = instance;

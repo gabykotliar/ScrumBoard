@@ -29,7 +29,7 @@ namespace ScrumBoard.Web.App_Start.DependencyResolution
                 {
                     scan.TheCallingAssembly();
 
-                    scan.Assembly("ScrumBoard.Domain");
+                    scan.Assembly("ScrumBoard.Services.Implementation");
 
                     scan.Convention<EquallyNamedTypeAndInterfaceConvention>();
                     scan.Convention<ValidatorInterfaceNameConvention>();
