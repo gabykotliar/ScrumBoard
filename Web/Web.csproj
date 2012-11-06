@@ -303,8 +303,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Filters\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -317,6 +315,10 @@
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{17721966-CEFF-4D50-B591-1C0D4FF2ABF5}</Project>
       <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{47DB6FAA-D38E-44D6-8AED-6593FE10FC1C}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
