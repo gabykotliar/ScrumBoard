@@ -31,8 +31,7 @@ namespace ScrumBoard.Web.App_Start.DependencyResolution
 
                     scan.Assembly("ScrumBoard.Services.Implementation");
 
-                    scan.Convention<EquallyNamedTypeAndInterfaceConvention>();
-                    scan.Convention<ValidatorInterfaceNameConvention>();
+                    scan.Convention<EquallyNamedTypeAndInterfaceConvention>();                    
 
                     scan.WithDefaultConventions();
                 }));
