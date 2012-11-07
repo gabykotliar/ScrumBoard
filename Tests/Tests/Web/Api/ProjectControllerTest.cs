@@ -2,8 +2,6 @@
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Controllers;
-using System.Web.Http.Hosting;
 using System.Web.Http.Routing;
 
 using FluentAssertions;
@@ -40,66 +38,22 @@ namespace ScrumBoard.Tests.Web.Api
 
             var controller = new ProjectController(serviceMock.Object);
 
-            SetControllerContext(controller);
+            var route = new HttpRouteData(new HttpRoute(), new HttpRouteValueDictionary { { "controller", "Products" }, { "action", "Post" } });            
 
-            controller.Request.Method = HttpMethod.Post;
-            controller.Request.RequestUri = new Uri("http://localhost/api/products");
+            ContextUtil.SetControllerContext(controller, 
+                                             request: new HttpRequestMessage(HttpMethod.Post, "http://localhost/api/products"),
+                                             routeData: route);
+
+            controller.Configuration.Routes.MapHttpRoute(
+                                                name: "DefaultApi",
+                                                routeTemplate: "api/{controller}/{id}",
+                                                defaults: new { id = RouteParameter.Optional });
 
             var response = controller.Post(project);
 
             serviceMock.Verify();
 
             response.StatusCode.Should().Be(HttpStatusCode.Created);
-        }
-
-        private void SetControllerContext(ApiController controller)
-        {
-            var ctx = CreateControllerContext();
-
-            controller.ControllerContext = ctx;
-            controller.Request = ctx.Request;
-            controller.Configuration = ctx.Configuration;
-        }
-
-        public HttpActionContext CreateActionContext(HttpControllerContext controllerContext = null, HttpActionDescriptor actionDescriptor = null)
-        {
-            HttpControllerContext context = controllerContext ?? CreateControllerContext();
-            HttpActionDescriptor descriptor = actionDescriptor ?? new Mock<HttpActionDescriptor>() { CallBase = true }.Object;
-            return new HttpActionContext(context, descriptor);
-        }
-
-        public HttpControllerContext CreateControllerContext(HttpConfiguration configuration = null, IHttpController instance = null, IHttpRouteData routeData = null, HttpRequestMessage request = null)
-        {
-            HttpConfiguration config = configuration ?? new HttpConfiguration();
-
-            if (routeData == null )
-            {
-                var route = config.Routes.MapHttpRoute("DefaultApi", "api/{controller}/{id}");
-                routeData = new HttpRouteData(route);
-            }
-            
-            HttpRequestMessage req = request ?? new HttpRequestMessage();
-            req.Properties[HttpPropertyKeys.HttpConfigurationKey] = config;
-            req.Properties[HttpPropertyKeys.HttpRouteDataKey] = routeData;
-
-            var context = new HttpControllerContext(config, routeData, req);
-
-            if (instance != null)
-            {
-                context.Controller = instance;
-            }
-            context.ControllerDescriptor = CreateControllerDescriptor(config);
-
-            return context;
-        }
-
-        public HttpControllerDescriptor CreateControllerDescriptor(HttpConfiguration config = null)
-        {
-            if (config == null)
-            {
-                config = new HttpConfiguration();
-            }
-            return new HttpControllerDescriptor { Configuration = config };
         }
     }
 }
