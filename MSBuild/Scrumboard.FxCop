@@ -22,9 +22,9 @@
  </ProjectOptions>
  <Targets>
   <AssemblyReferenceDirectories>
+   <Directory>$(ProjectDir)/../Domain.Validation.Infrastructure/bin/Debug/</Directory>
    <Directory>$(ProjectDir)/../Web/bin/</Directory>
   </AssemblyReferenceDirectories>
-  <Target Name="$(ProjectDir)/../Domain.Validation.Infrastructure/bin/Debug/ScrumBoard.Domain.Validation.Infrastructure.dll" Analyze="True" AnalyzeAllChildren="True" />
   <Target Name="$(ProjectDir)/../Domain/bin/Debug/ScrumBoard.Domain.dll" Analyze="True" AnalyzeAllChildren="True" />
   <Target Name="$(ProjectDir)/../Persistence/bin/Debug/ScrumBoard.Persistence.dll" Analyze="True" AnalyzeAllChildren="True" />
   <Target Name="$(ProjectDir)/../PersistenceImpl/bin/Debug/ScrumBoard.Persistence.Implementation.dll" Analyze="True" AnalyzeAllChildren="True" />
@@ -165,16 +165,6 @@
            </Message>
           </Messages>
          </Type>
-         <Type Name="ProductBacklogValidator">
-          <Messages>
-           <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Created="2012-10-26 14:39:26Z">
-            <Issue>
-             <Item>'ProductBacklogValidator'</Item>
-             <Item>Collection</Item>
-            </Issue>
-           </Message>
-          </Messages>
-         </Type>
          <Type Name="Project">
           <Members>
            <Member Name="#Backlog">
@@ -189,30 +179,10 @@
            </Member>
           </Members>
          </Type>
-         <Type Name="ProjectValidator">
-          <Messages>
-           <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Created="2012-10-26 14:39:26Z">
-            <Issue>
-             <Item>'ProjectValidator'</Item>
-             <Item>Collection</Item>
-            </Issue>
-            <Notes>
-             <User Name="gabriel.kotliar">
-              <Note Id="0" />
-             </User>
-            </Notes>
-           </Message>
-          </Messages>
-         </Type>
          <Type Name="Sprint">
           <Members>
            <Member Name="#Stories">
             <Messages>
-             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2012-10-26 14:39:26Z">
-              <Issue>
-               <Item>'Sprint.Stories'</Item>
-              </Issue>
-             </Message>
              <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2012-10-26 14:39:26Z">
               <Issue>
                <Item>'List&lt;UserStory&gt;'</Item>
@@ -223,12 +193,30 @@
            </Member>
           </Members>
          </Type>
-         <Type Name="SprintValidator">
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/../Services/bin/Debug/ScrumBoard.Services.dll">
+    <Modules>
+     <Module Name="scrumboard.services.dll">
+      <Messages>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2012-11-13 18:16:11Z">
+        <Issue>
+         <Item>'ScrumBoard.Services.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="ScrumBoard.Services">
+        <Types>
+         <Type Name="ProjectService">
           <Messages>
-           <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Created="2012-10-26 14:39:26Z">
-            <Issue>
-             <Item>'SprintValidator'</Item>
-             <Item>Collection</Item>
+           <Message Id="I" TypeName="IdentifiersShouldHaveCorrectPrefix" Category="Microsoft.Naming" CheckId="CA1715" Created="2012-11-13 18:16:11Z" FixCategory="Breaking">
+            <Issue Name="Interface">
+             <Item>'ProjectService'</Item>
             </Issue>
            </Message>
           </Messages>
@@ -239,21 +227,32 @@
      </Module>
     </Modules>
    </Target>
+   <Target Name="$(ProjectDir)/../ServicesImpl/bin/Debug/ScrumBoard.Services.Implementation.dll">
+    <Modules>
+     <Module Name="scrumboard.services.implementation.dll">
+      <Messages>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2012-11-13 18:16:11Z">
+        <Issue>
+         <Item>'ScrumBoard.Services.Implementation.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+     </Module>
+    </Modules>
+   </Target>
   </Targets>
-  <Notes>
-   <User Name="gabriel.kotliar">
-    <Note Id="0" Modified="2012-10-26 14:50:23Z">asdf</Note>
-   </User>
-  </Notes>
   <Rules>
-   <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
-    <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
-   </Rule>
    <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
     <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
    </Rule>
+   <Rule TypeName="IdentifiersShouldHaveCorrectPrefix" Category="Microsoft.Naming" CheckId="CA1715">
+    <Resolution Name="Interface">Prefix interface name {0} with 'I'.</Resolution>
+   </Rule>
    <Rule TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710">
     <Resolution Name="Default">Rename {0} to end in '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+    <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
    </Rule>
   </Rules>
  </FxCopReport>
