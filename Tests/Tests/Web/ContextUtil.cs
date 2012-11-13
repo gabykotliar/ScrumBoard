@@ -13,6 +13,12 @@ namespace ScrumBoard.Tests.Web
 {
     internal static class ContextUtil
     {
+        public static void SetApiControllerContext(ApiController controller, HttpConfiguration configuration = null, IHttpRouteData routeData = null, HttpRequestMessage request = null)
+        {
+            SetControllerContext(controller, configuration, routeData, request);
+
+            AddDefaultApiRoute(controller.Configuration);
+        }
 
         public static void SetControllerContext(ApiController controller, HttpConfiguration configuration = null, IHttpRouteData routeData = null, HttpRequestMessage request = null)
         {
@@ -36,6 +42,7 @@ namespace ScrumBoard.Tests.Web
             {
                 context.Controller = instance;
             }
+
             context.ControllerDescriptor = CreateControllerDescriptor(config);
 
             return context;
@@ -43,8 +50,8 @@ namespace ScrumBoard.Tests.Web
 
         public static HttpActionContext CreateActionContext(HttpControllerContext controllerContext = null, HttpActionDescriptor actionDescriptor = null)
         {
-            HttpControllerContext context = controllerContext ?? ContextUtil.CreateControllerContext();
-            HttpActionDescriptor descriptor = actionDescriptor ?? new Mock<HttpActionDescriptor>() { CallBase = true }.Object;
+            HttpControllerContext context = controllerContext ?? CreateControllerContext();
+            HttpActionDescriptor descriptor = actionDescriptor ?? new Mock<HttpActionDescriptor> { CallBase = true }.Object;
             return new HttpActionContext(context, descriptor);
         }
 
@@ -69,7 +76,16 @@ namespace ScrumBoard.Tests.Web
             {
                 config = new HttpConfiguration();
             }
+
             return new HttpControllerDescriptor { Configuration = config };
+        }
+
+        public static void AddDefaultApiRoute(HttpConfiguration configuration)
+        {
+            configuration.Routes.MapHttpRoute(
+                                              name: "DefaultApi",
+                                              routeTemplate: "api/{controller}/{id}",
+                                              defaults: new { id = RouteParameter.Optional });
         }
     }
 }

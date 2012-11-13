@@ -1,7 +1,6 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
-using System.Web.Http;
+using System.Web.Http.ModelBinding;
 using System.Web.Http.Routing;
 
 using FluentAssertions;
@@ -29,31 +28,65 @@ namespace ScrumBoard.Tests.Web.Api
         }
 
         [TestMethod]
-        public void CreateTest()
+        public void PostProductCallProductServiceTest()
         {
             var project = new Project();
             var serviceMock = new Mock<ProjectService>();
 
             serviceMock.Setup(s => s.Create(project));
 
-            var controller = new ProjectController(serviceMock.Object);
-
-            var route = new HttpRouteData(new HttpRoute(), new HttpRouteValueDictionary { { "controller", "Products" }, { "action", "Post" } });            
-
-            ContextUtil.SetControllerContext(controller, 
-                                             request: new HttpRequestMessage(HttpMethod.Post, "http://localhost/api/products"),
-                                             routeData: route);
-
-            controller.Configuration.Routes.MapHttpRoute(
-                                                name: "DefaultApi",
-                                                routeTemplate: "api/{controller}/{id}",
-                                                defaults: new { id = RouteParameter.Optional });
+            var controller = GetApiProjectController(serviceMock);
 
             var response = controller.Post(project);
 
             serviceMock.Verify();
 
             response.StatusCode.Should().Be(HttpStatusCode.Created);
+        }
+
+        [TestMethod]
+        public void PostProductReturnsCreatedStatusCodeTest()
+        {
+            var controller = GetApiProjectController(new Mock<ProjectService>());
+
+            var response = controller.Post(new Project());
+
+            response.StatusCode.Should().Be(HttpStatusCode.Created);
+        }
+
+        [TestMethod]
+        public void PostProductReturnsRightLocationTest()
+        {
+            var controller = GetApiProjectController(new Mock<ProjectService>());
+
+            var response = controller.Post(new Project { Id = 123 });
+
+            response.Headers.Location.Should().Be("http://localhost/api/projects/123");
+        }
+
+        [TestMethod]
+        public void PostProductReturnsBadRequestStatusCodeForInvalidModelTest()
+        {
+            var controller = GetApiProjectController(new Mock<ProjectService>());
+
+            controller.ModelState.AddModelError("Name", "Name is required");
+
+            var response = controller.Post(new Project());
+
+            response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        }
+
+        private static ProjectController GetApiProjectController(Mock<ProjectService> serviceMock)
+        {
+            var controller = new ProjectController(serviceMock.Object);
+
+            ContextUtil.SetApiControllerContext(
+                controller,
+                request: new HttpRequestMessage(HttpMethod.Post, "http://localhost/api/projects"),
+                routeData:
+                    new HttpRouteData(
+                        new HttpRoute(), new HttpRouteValueDictionary { { "controller", "projects" }, { "action", "Post" } }));
+            return controller;
         }
     }
 }
