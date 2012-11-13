@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace ScrumBoard.Domain
@@ -8,14 +8,14 @@ namespace ScrumBoard.Domain
     {
         public Sprint()
         {
-            Stories = new List<UserStory>();
+            Stories = new Collection<UserStory>();
         }
 
         public virtual DateTime StartsAt { get; set; }
 
         public virtual DateTime EndsAt { get; set; }
 
-        public virtual List<UserStory> Stories { get; private set; }
+        public virtual Collection<UserStory> Stories { get; private set; }
 
         public virtual double CommittedEffort
         {

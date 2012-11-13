@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using FluentAssertions;
+﻿using FluentAssertions;
 using ScrumBoard.Domain;
 
 using TechTalk.SpecFlow;
@@ -27,14 +26,11 @@ namespace ScrumBoard.Specs.Steps
         [Then(@"The commited effort is the sum of the efforts of each story in the sprint")]
         public void ThenTheCommitedEffortIsTheSumOfTheEffortsOfEachStoryInTheSprint()
         {
-            sprint.Stories.AddRange(new[]
-                                         {
-                                             new UserStory { Effort = 0.5 },
-                                             new UserStory { Effort = 2 },
-                                             new UserStory { Effort = 2 },
-                                             new UserStory { Effort = 4 },
-                                             new UserStory { Effort = 5 },
-                                         });
+            sprint.Stories.Add(new UserStory { Effort = 0.5 });            
+            sprint.Stories.Add(new UserStory { Effort = 2 });            
+            sprint.Stories.Add(new UserStory { Effort = 2 });            
+            sprint.Stories.Add(new UserStory { Effort = 4 });            
+            sprint.Stories.Add(new UserStory { Effort = 5 });            
 
             sprint.CommittedEffort.Should().BeLessOrEqualTo(13.5);
         }
