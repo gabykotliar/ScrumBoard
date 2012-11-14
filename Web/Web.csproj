@@ -248,6 +248,9 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\Views.min.js.map">
+      <DependentUpon>Views.js</DependentUpon>
+    </Content>
     <TypeScriptCompile Include="Scripts\jquery.d.ts" />
     <Content Include="Scripts\jquery.d.js">
       <DependentUpon>jquery.d.ts</DependentUpon>
