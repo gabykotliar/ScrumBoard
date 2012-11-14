@@ -17,7 +17,7 @@ namespace ScrumBoard.Web.Controllers.Api
             this.service = service;
         }
 
-        public HttpResponseMessage Post([FromBody] Project project)
+        public HttpResponseMessage Post(Project project)
         {            
             if (!ModelState.IsValid) return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
@@ -32,7 +32,7 @@ namespace ScrumBoard.Web.Controllers.Api
 
         private void AddResourceLocation(Project project, HttpResponseMessage response)
         {
-            string uri = Url.Link("DefaultApi", new { id = project.Id });
+            string uri = Url.Link("DefaultApi", new { id = project.Id });            
             response.Headers.Location = new Uri(uri);
         }
     }
