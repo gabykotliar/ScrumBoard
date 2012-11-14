@@ -30,7 +30,8 @@
 
 @section Scripts {
 
-    <script src="~/Scripts/Views.js"></script>
+    <script src="~/Scripts/Utils.js"></script>
+    <script src="~/Scripts/ViewModels.js"></script>
 
     @Scripts.Render("~/bundles/jqueryval")    
     
@@ -38,7 +39,7 @@
         
         $(document).ready(function () {
 
-            var view = new Views.Project.New({
+            var view = new ViewModels.Project.NewViewModel({
                 apiPostUrl: '/api/project',
                 successRedirectUrl: '@Url.Action("Dashboard")' + '/'
             });

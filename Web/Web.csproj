@@ -248,8 +248,9 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
-    <Content Include="Scripts\Views.min.js.map">
-      <DependentUpon>Views.js</DependentUpon>
+    <TypeScriptCompile Include="Scripts\Utils.ts" />
+    <Content Include="Scripts\Utils.js">
+      <DependentUpon>Utils.ts</DependentUpon>
     </Content>
     <TypeScriptCompile Include="Scripts\jquery.d.ts" />
     <Content Include="Scripts\jquery.d.js">
@@ -264,12 +265,12 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
-    <TypeScriptCompile Include="Scripts\Views.ts" />
-    <Content Include="Scripts\Views.js">
-      <DependentUpon>Views.ts</DependentUpon>
+    <TypeScriptCompile Include="Scripts\ViewModels.ts" />
+    <Content Include="Scripts\ViewModels.js">
+      <DependentUpon>ViewModels.ts</DependentUpon>
     </Content>
-    <Content Include="Scripts\Views.min.js">
-      <DependentUpon>Views.ts</DependentUpon>
+    <Content Include="Scripts\ViewModels.min.js">
+      <DependentUpon>ViewModels.ts</DependentUpon>
     </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
