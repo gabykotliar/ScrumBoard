@@ -17,19 +17,20 @@
         <ol>
             <li>
                 @Html.LabelFor(m => m.Name, "Name")
-                @Html.TextBoxFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name, new Dictionary<string, object> { {"data-bind", "value: Name"} })
             </li>
             <li>
                 @Html.LabelFor(m => m.Vision, "Vision")
-                @Html.TextAreaFor(m => m.Vision)
+                @Html.TextAreaFor(m => m.Vision, new Dictionary<string, object> { {"data-bind", "text: Vision"} })
             </li>
         </ol>
-        <input id="submit" type="button" value="Create" />
+        <input id="submit" data-bind="click: create" type="button" value="Create" />
     </fieldset>
 }
 
 @section Scripts {
 
+    <script src="~/Scripts/knockout-2.2.0.js"></script>
     <script src="~/Scripts/Utils.js"></script>
     <script src="~/Scripts/ViewModels.js"></script>
 
@@ -39,11 +40,12 @@
         
         $(document).ready(function () {
 
-            var view = new ViewModels.Project.NewViewModel({
+            var model = new ViewModels.Project.NewProjectViewModel({
                 apiPostUrl: '/api/project',
                 successRedirectUrl: '@Url.Action("Dashboard")' + '/'
             });
-                       
+            
+            ko.applyBindings(model);
         });
     </script>
 }

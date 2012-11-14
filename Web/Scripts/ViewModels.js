@@ -1,25 +1,22 @@
 var ViewModels;
 (function (ViewModels) {
     (function (Project) {
-        var NewViewModel = (function () {
-            function NewViewModel(options) {
+        var NewProjectViewModel = (function () {
+            function NewProjectViewModel(options) {
                 this.options = options;
+                this.Name = ko.observable('');
+                this.Vision = ko.observable('');
                 this.form = $('form');
-                this.submit = this.form.find('#submit');
-                var self = this;
-                this.submit.bind('click', null, function (e) {
-                    return self.post(e);
-                });
             }
-            NewViewModel.prototype.post = function (event) {
-                var self = this;
+            NewProjectViewModel.prototype.create = function () {
                 if(!this.form.valid()) {
                     return false;
                 }
-                var data = this.form.serialize();
+                var self = this;
                 $.ajax(this.options.apiPostUrl, {
                     type: 'POST',
-                    data: data,
+                    contentType: "application/json;charset=utf-8",
+                    data: this.toJSON(),
                     accepts: 'JSON',
                     context: this
                 }).success(function (result) {
@@ -29,12 +26,18 @@ var ViewModels;
                 });
                 return false;
             };
-            NewViewModel.prototype.successfulPost = function (result) {
+            NewProjectViewModel.prototype.toJSON = function () {
+                return JSON.stringify({
+                    Name: this.Name(),
+                    Vision: this.Vision()
+                });
+            };
+            NewProjectViewModel.prototype.successfulPost = function (result) {
                 window.location.href = this.options.successRedirectUrl + result.Name;
             };
-            return NewViewModel;
+            return NewProjectViewModel;
         })();
-        Project.NewViewModel = NewViewModel;        
+        Project.NewProjectViewModel = NewProjectViewModel;        
     })(ViewModels.Project || (ViewModels.Project = {}));
     var Project = ViewModels.Project;
 

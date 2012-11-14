@@ -1,4 +1,5 @@
 /// <reference path="jquery.d.ts" />
+/// <reference path="knockout-2.2.d.ts" />
 /// <reference path="Utils.ts" />
 
 interface ValidatableForm extends JQuery
@@ -10,35 +11,29 @@ module ViewModels.Project
 {
     interface NewViewModelConfigurationOptions { apiPostUrl: string; successRedirectUrl: string; }
      
-    export class NewViewModel 
-    { 
-        form: ValidatableForm;
-        submit: JQuery;                
+    export class NewProjectViewModel {
 
-        constructor (public options: NewViewModelConfigurationOptions) {             
+        Name = ko.observable('');
+        Vision = ko.observable('');
+
+        private form: ValidatableForm;
+
+        constructor (public options: NewViewModelConfigurationOptions) {
 
             this.form = <ValidatableForm>$('form');
-            this.submit = this.form.find('#submit');
-
-            var self = this;
-
-            this.submit.bind('click', null, function (e) {
-                return self.post(e);
-            });
         }
 
-        post(event:JQueryEventObject): bool { 
-
-            var self = this;
+        create(): bool {
 
             if (!this.form.valid()) return false;
 
-            var data = this.form.serialize();
+            var self = this;
 
             $.ajax(this.options.apiPostUrl,
             {
                 type: 'POST',
-                data: data,                
+                contentType: "application/json;charset=utf-8",
+                data: this.toJSON(),
                 accepts: 'JSON',
                 context: this
             })
@@ -47,14 +42,21 @@ module ViewModels.Project
             })
             .error(function (jqXHR, textStatus, errorThrown) {
                 new Utils.ErrorHandler().webApiError(jqXHR, textStatus, errorThrown);
-            });            
+            });
 
             return false; //cancel default event
         }
 
-        successfulPost(result: any): void 
-        { 
-            window.location.href = this.options.successRedirectUrl + result.Name;            
+        toJSON(): string {
+
+            return JSON.stringify({
+                Name: this.Name(),
+                Vision: this.Vision()
+            });
         }
+
+        successfulPost(result: any): void {
+            window.location.href = this.options.successRedirectUrl + result.Name;
+        }        
     }
 }

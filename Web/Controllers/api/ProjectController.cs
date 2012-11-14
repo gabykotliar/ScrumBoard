@@ -17,7 +17,7 @@ namespace ScrumBoard.Web.Controllers.Api
             this.service = service;
         }
 
-        public HttpResponseMessage Post(Project project)
+        public HttpResponseMessage Post([FromBody] Project project)
         {            
             if (!ModelState.IsValid) return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 

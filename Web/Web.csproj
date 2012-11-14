@@ -249,6 +249,12 @@
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
     <TypeScriptCompile Include="Scripts\Utils.ts" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <TypeScriptCompile Include="Scripts\knockout-2.2.d.ts" />
+    <Content Include="Scripts\knockout-2.2.d.js">
+      <DependentUpon>knockout-2.2.d.ts</DependentUpon>
+    </Content>
     <Content Include="Scripts\Utils.js">
       <DependentUpon>Utils.ts</DependentUpon>
     </Content>
@@ -262,8 +268,6 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.1.0.debug.js" />
-    <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <TypeScriptCompile Include="Scripts\ViewModels.ts" />
     <Content Include="Scripts\ViewModels.js">
