@@ -55,7 +55,7 @@ var ViewModels;
                 });
             };
             NewProjectViewModel.prototype.onResourceCreated = function (data, textStatus, jqXHR) {
-                window.location.href = this.options.successRedirectUrl + data.Name;
+                window.location.href = this.options.successRedirectUrl.replace("[id]", data.Name);
             };
             return NewProjectViewModel;
         })(NewResourceViewModel);

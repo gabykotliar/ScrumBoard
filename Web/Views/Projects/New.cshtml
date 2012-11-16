@@ -42,7 +42,7 @@
 
             var viewModel = new ViewModels.Project.NewProjectViewModel({
                 apiPostUrl: '/api/project',
-                successRedirectUrl: '@Url.Action("Dashboard")' + '/'
+                successRedirectUrl: '@Url.Action("Dashboard", "Project", new { Area = "Project", Id = "[id]"})'
             });
 
             viewModel.initialize();                       
