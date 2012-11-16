@@ -40,12 +40,12 @@
         
         $(document).ready(function () {
 
-            var model = new ViewModels.Project.NewProjectViewModel({
+            var viewModel = new ViewModels.Project.NewProjectViewModel({
                 apiPostUrl: '/api/project',
                 successRedirectUrl: '@Url.Action("Dashboard")' + '/'
             });
-            
-            ko.applyBindings(model);
+
+            viewModel.initialize();                       
         });
     </script>
 }

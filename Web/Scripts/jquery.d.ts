@@ -18,7 +18,7 @@ interface JQueryAjaxSettings {
    data?: any;
    dataFilter?(data: any, ty: any): any;
    dataType?: string;
-   error?(jqXHR: JQueryXHR, textStatus: string, errorThrow: string): any;
+   error?(jqXHR: JQueryXHR, textStatus: string, errorThrown: string): any;
    global?: bool;
    headers?: { [key: any]: any; };
    ifModified?: bool;

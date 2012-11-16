@@ -9,25 +9,23 @@ interface ValidatableForm extends JQuery
 
 module ViewModels.Project 
 {
-    interface NewViewModelConfigurationOptions { apiPostUrl: string; successRedirectUrl: string; }
-     
-    export class NewProjectViewModel {
+    interface NewViewModelConfigurationOptions { apiPostUrl: string; }
 
-        Name = ko.observable('');
-        Vision = ko.observable('');
+    class NewResourceViewModel { 
 
-        private form: ValidatableForm;
+        form: ValidatableForm;
 
         constructor (public options: NewViewModelConfigurationOptions) {
-
             this.form = <ValidatableForm>$('form');
+        }
+
+        initialize() { 
+            ko.applyBindings(this);
         }
 
         create(): bool {
 
             if (!this.form.valid()) return false;
-
-            var self = this;
 
             $.ajax(this.options.apiPostUrl,
             {
@@ -35,16 +33,41 @@ module ViewModels.Project
                 contentType: "application/json;charset=utf-8",
                 data: this.toJSON(),
                 accepts: 'JSON',
-                context: this
-            })
-            .success(function (result) {
-                self.successfulPost(result);
-            })
-            .error(function (jqXHR, textStatus, errorThrown) {
-                new Utils.ErrorHandler().webApiError(jqXHR, textStatus, errorThrown);
+                context: this,
+                success: this.onResourceCreated,
+                error: this.onError
             });
 
             return false; //cancel default event
+        }
+
+        toJSON(): string {
+            return '{}';
+        }
+
+        onResourceCreated(data: any, textStatus: string, jqXHR: JQueryXHR) { 
+            alert(jqXHR.statusText);
+        }
+
+        onError(jqXHR: JQueryXHR, textStatus: string, errorThrown: string): any { 
+            new Utils.ErrorHandler().webApiError(jqXHR, textStatus, errorThrown);
+        }
+    }
+    
+    interface NewProjectViewModelConfigurationOptions 
+        extends NewViewModelConfigurationOptions 
+    { 
+        successRedirectUrl: string; 
+    }
+     
+    export class NewProjectViewModel 
+        extends NewResourceViewModel {
+
+        Name = ko.observable('');
+        Vision = ko.observable('');
+
+        constructor (public options: NewProjectViewModelConfigurationOptions) {
+            super(options);
         }
 
         toJSON(): string {
@@ -55,8 +78,8 @@ module ViewModels.Project
             });
         }
 
-        successfulPost(result: any): void {
-            window.location.href = this.options.successRedirectUrl + result.Name;
-        }        
+        onResourceCreated(data: any, textStatus: string, jqXHR: JQueryXHR) { 
+            window.location.href = this.options.successRedirectUrl + data.Name;
+        }
     }
 }
