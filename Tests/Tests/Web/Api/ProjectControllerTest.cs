@@ -12,6 +12,7 @@ using Moq;
 using ScrumBoard.Domain;
 using ScrumBoard.Services;
 using ScrumBoard.Web.Controllers.Api;
+using ScrumBoard.Web.Models;
 
 namespace ScrumBoard.Tests.Web.Api
 {
@@ -30,6 +31,7 @@ namespace ScrumBoard.Tests.Web.Api
         [TestMethod]
         public void PostProductCallProductServiceTest()
         {
+            var projectDTO = new NewProject();
             var project = new Project();
             var serviceMock = new Mock<ProjectService>();
 
@@ -37,7 +39,7 @@ namespace ScrumBoard.Tests.Web.Api
 
             var controller = GetApiProjectController(serviceMock);
 
-            var response = controller.Post(project);
+            var response = controller.Post(projectDTO);
 
             serviceMock.Verify();
 
@@ -49,7 +51,7 @@ namespace ScrumBoard.Tests.Web.Api
         {
             var controller = GetApiProjectController(new Mock<ProjectService>());
 
-            var response = controller.Post(new Project());
+            var response = controller.Post(new NewProject());
 
             response.StatusCode.Should().Be(HttpStatusCode.Created);
         }
@@ -59,7 +61,10 @@ namespace ScrumBoard.Tests.Web.Api
         {
             var controller = GetApiProjectController(new Mock<ProjectService>());
 
-            var response = controller.Post(new Project { Id = 123 });
+            var mock = new Mock<NewProject>();
+            mock.Setup(m => m.ToEntity()).Returns(new Project{ Id = 123 });
+
+            var response = controller.Post(mock.Object);
 
             response.Headers.Location.Should().Be("http://localhost/api/projects/123");
         }
@@ -71,7 +76,7 @@ namespace ScrumBoard.Tests.Web.Api
 
             controller.ModelState.AddModelError("Name", "Name is required");
 
-            var response = controller.Post(new Project());
+            var response = controller.Post(new NewProject());
 
             response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
         }
