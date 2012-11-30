@@ -263,6 +263,7 @@
     <Content Include="Scripts\knockout-2.2.d.js">
       <DependentUpon>knockout-2.2.d.ts</DependentUpon>
     </Content>
+    <Content Include="Scripts\URI.min.js" />
     <Content Include="Scripts\Utils.js">
       <DependentUpon>Utils.ts</DependentUpon>
     </Content>
