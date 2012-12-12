@@ -25,16 +25,19 @@ namespace ScrumBoard.Web.App_Start.DependencyResolution
     {
         public static IContainer Initialize() 
         {
-            ObjectFactory.Initialize(x => x.Scan(scan =>
-                {
-                    scan.TheCallingAssembly();
+            ObjectFactory.Initialize(x => x.Scan(
+                scan =>
+                    {
+                        scan.TheCallingAssembly();
 
-                    scan.Assembly("ScrumBoard.Services.Implementation");
+                        scan.Assembly("ScrumBoard.Services.Implementation");
+                        scan.Assembly("ScrumBoard.Persistence.Implementation");
 
-                    scan.Convention<EquallyNamedTypeAndInterfaceConvention>();                    
+                        scan.Convention<EquallyNamedTypeAndInterfaceConvention>();
 
-                    scan.WithDefaultConventions();
-                }));
+                        scan.WithDefaultConventions();
+                        scan.LookForRegistries();
+                    }));
 
             return ObjectFactory.Container;
         }

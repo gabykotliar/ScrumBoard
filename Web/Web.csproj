@@ -192,6 +192,27 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <InjectedDependencies Include="..\PersistenceImpl\bin\Debug\ScrumBoard.Persistence.Implementation.dll">
+      <Link>ScrumBoard.Persistence.ImplementationASAS.dll</Link>
+    </InjectedDependencies>
+    <InjectedDependencies Include="..\PersistenceImpl\bin\Debug\ScrumBoard.Persistence.dll">
+      <Link>ScrumBoard.Persistence.dll</Link>
+    </InjectedDependencies>
+    <InjectedDependencies Include="..\PersistenceImpl\bin\Debug\FluentNHibernate.dll">
+      <Link>FluentNHibernate.dll</Link>
+    </InjectedDependencies>
+    <InjectedDependencies Include="..\PersistenceImpl\bin\Debug\NHibernate.dll">
+      <Link>NHibernate.dll</Link>
+    </InjectedDependencies>
+    <InjectedDependencies Include="..\PersistenceImpl\bin\Debug\Iesi.Collections.dll">
+      <Link>Iesi.Collections.dll</Link>
+    </InjectedDependencies>
+    <InjectedDependencies Include="..\.References\Common.dll">
+      <Link>Common.dll</Link>
+    </InjectedDependencies>
+    <InjectedDependencies Include="..\.References\Common.Persistence.NHibernate.dll">
+      <Link>Common.Persistence.NHibernate.dll</Link>
+    </InjectedDependencies>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />

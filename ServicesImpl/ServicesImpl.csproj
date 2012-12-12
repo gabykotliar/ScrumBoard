@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common">
+      <HintPath>..\Tests\Specs\bin\Debug\Common.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +49,10 @@
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{17721966-CEFF-4D50-B591-1C0D4FF2ABF5}</Project>
       <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistence\Persistence.csproj">
+      <Project>{BDAC30B6-DD56-4FE4-87DF-8C6C740838FB}</Project>
+      <Name>Persistence</Name>
     </ProjectReference>
     <ProjectReference Include="..\Services\Services.csproj">
       <Project>{47db6faa-d38e-44d6-8aed-6593fe10fc1c}</Project>
