@@ -59,6 +59,8 @@
       <HintPath>..\packages\CommonServiceLocator.StructureMapAdapter.1.1.0.3\lib\StructureMapAdapter.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -263,6 +265,10 @@
     <Content Include="Scripts\knockout-2.2.d.js">
       <DependentUpon>knockout-2.2.d.ts</DependentUpon>
     </Content>
+    <TypeScriptCompile Include="Scripts\URI.d.ts" />
+    <Content Include="Scripts\URI.d.js">
+      <DependentUpon>URI.d.ts</DependentUpon>
+    </Content>
     <Content Include="Scripts\URI.min.js" />
     <Content Include="Scripts\Utils.js">
       <DependentUpon>Utils.ts</DependentUpon>
@@ -279,6 +285,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <TypeScriptCompile Include="Scripts\ViewModels.ts" />
+    <Content Include="Scripts\Utils.min.js">
+      <DependentUpon>Utils.ts</DependentUpon>
+    </Content>
     <Content Include="Scripts\ViewModels.js">
       <DependentUpon>ViewModels.ts</DependentUpon>
     </Content>

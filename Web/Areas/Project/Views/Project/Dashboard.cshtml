@@ -10,6 +10,7 @@
 @section Scripts {
    
     <script src="~/Scripts/URI.min.js"></script>
+    <script src="~/Scripts/knockout-2.2.0.js"></script>
     <script src="~/Scripts/Utils.js"></script>
     <script src="~/Scripts/ViewModels.js"></script>
     
@@ -18,25 +19,9 @@
         
         $(document).ready(function () {
 
-            //var uri = new URI(window.location);                        
+            var viewModel = new ViewModels.Project.DashboardViewModel();
 
-            //$.ajax('/api/project/' + uri.filename(),
-            //{
-            //    type: 'GET',
-            //    //contentType: "application/json;charset=utf-8",
-            //    //data: this.toJSON(),
-            //    accepts: 'JSON',
-            //    context: this,
-            //    success: function (data, textStatus, jqXHR) {                                       
-
-            //        $('h1').text(data.Name);
-
-            //        document.title = data.Name + ' - Dashboard';
-            //    },
-            //    error: function (jqXHR, textStatus, errorThrown) { 
-            //        new Utils.ErrorHandler().webApiError(jqXHR, textStatus, errorThrown);
-            //    }
-            //});
+            viewModel.initialize(); 
 
         });
     </script>

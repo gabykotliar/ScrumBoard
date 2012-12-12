@@ -44,9 +44,9 @@ var Utils;
         UriHelper._current = undefined;
         UriHelper.current = function current() {
             if(!this._current) {
-                this.current = new URI(window.location);
+                this._current = new URI(window.location.href);
             }
-            return this.current;
+            return this._current;
         }
         UriHelper.currentFile = function currentFile() {
             return this.current().filename();

@@ -66,16 +66,15 @@ var ViewModels;
                 this.projectVision = '';
             }
             DashboardViewModel.prototype.initialize = function () {
-                var uri = new URI(window.location);
                 var self = this;
-                $.ajax('/api/project/' + uri.filename(), {
+                $.ajax('/api/project/' + Utils.UriHelper.currentFile(), {
                     type: 'GET',
                     accepts: 'JSON',
                     context: this,
-                    success: function (data, textStatus, jqXHR) {
-                        self.projectName = data.projectName;
+                    success: function (project, textStatus, jqXHR) {
+                        self.projectName = project.Name;
                         ko.applyBindings(this);
-                        document.title = data.Name + ' - Dashboard';
+                        document.title = project.Name + ' - Dashboard';
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
                         new Utils.ErrorHandler().webApiError(jqXHR, textStatus, errorThrown);
