@@ -90,22 +90,20 @@ module ViewModels.Project
 
         initialize() { 
 
-            var uri =  new URI(window.location);                        
             var self = this;
 
-            $.ajax('/api/project/' + uri.filename(),
+            $.ajax('/api/project/' + Utils.UriHelper.currentFile(),
             {
                 type: 'GET',                
                 accepts: 'JSON',
                 context: this,
-                success: function (data, textStatus, jqXHR) {                                       
+                success: function (project, textStatus, jqXHR) {                                       
 
-                    self.projectName = data.projectName;
+                    self.projectName = project.Name;
 
-                    //$('h1').text(data.Name);
                     ko.applyBindings(this);
 
-                    document.title = data.Name + ' - Dashboard';
+                    document.title = project.Name + ' - Dashboard';
                 },
                 error: function (jqXHR, textStatus, errorThrown) { 
                     new Utils.ErrorHandler().webApiError(jqXHR, textStatus, errorThrown);
