@@ -82,4 +82,35 @@ module ViewModels.Project
             window.location.href = this.options.successRedirectUrl.replace("[id]", data.Name);
         }
     }
+
+    export class DashboardViewModel { 
+
+        projectName = '';
+        projectVision = '';
+
+        initialize() { 
+
+            var uri =  new URI(window.location);                        
+            var self = this;
+
+            $.ajax('/api/project/' + uri.filename(),
+            {
+                type: 'GET',                
+                accepts: 'JSON',
+                context: this,
+                success: function (data, textStatus, jqXHR) {                                       
+
+                    self.projectName = data.projectName;
+
+                    //$('h1').text(data.Name);
+                    ko.applyBindings(this);
+
+                    document.title = data.Name + ' - Dashboard';
+                },
+                error: function (jqXHR, textStatus, errorThrown) { 
+                    new Utils.ErrorHandler().webApiError(jqXHR, textStatus, errorThrown);
+                }
+            });
+        }
+    }
 }

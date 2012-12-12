@@ -56,4 +56,25 @@ module Utils
             return msg;
         }
     }
+
+    interface URI { 
+        (url: string, base? );
+    }
+
+    export class UriHelper { 
+
+        private static _current: any;
+
+        private static current() { 
+
+            if (!this._current)
+                this.current = new URI(window.location);
+
+            return this.current;
+        }
+
+        static currentFile() { 
+            return this.current().filename();
+        }
+    }
 }

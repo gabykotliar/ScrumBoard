@@ -4,10 +4,9 @@ namespace ScrumBoard.Web.Areas.Project.Controllers
 {
     public class ProjectController : Controller
     {
-        public ActionResult Dashboard(string id)
+        public ActionResult Dashboard(string projectKey)
         {
-            return View(new Domain.Project { Name = string.Format("My Project ({0})", id) });
+            return View();
         }
-
     }
 }

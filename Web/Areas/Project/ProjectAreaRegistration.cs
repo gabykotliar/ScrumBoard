@@ -13,9 +13,8 @@ namespace ScrumBoard.Web.Areas.Project
         {
             context.MapRoute(
                 "Project_default",
-                "Project/{id}/{controller}/{action}/",
-                new { controller = "Project", action = "Dashboard" }
-            );
+                "Project/{projectKey}/{controller}/{action}/",
+                new { controller = "Project", action = "Dashboard" });
         }
     }
 }

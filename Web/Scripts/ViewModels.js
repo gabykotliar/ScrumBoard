@@ -60,6 +60,31 @@ var ViewModels;
             return NewProjectViewModel;
         })(NewResourceViewModel);
         Project.NewProjectViewModel = NewProjectViewModel;        
+        var DashboardViewModel = (function () {
+            function DashboardViewModel() {
+                this.projectName = '';
+                this.projectVision = '';
+            }
+            DashboardViewModel.prototype.initialize = function () {
+                var uri = new URI(window.location);
+                var self = this;
+                $.ajax('/api/project/' + uri.filename(), {
+                    type: 'GET',
+                    accepts: 'JSON',
+                    context: this,
+                    success: function (data, textStatus, jqXHR) {
+                        self.projectName = data.projectName;
+                        ko.applyBindings(this);
+                        document.title = data.Name + ' - Dashboard';
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        new Utils.ErrorHandler().webApiError(jqXHR, textStatus, errorThrown);
+                    }
+                });
+            };
+            return DashboardViewModel;
+        })();
+        Project.DashboardViewModel = DashboardViewModel;        
     })(ViewModels.Project || (ViewModels.Project = {}));
     var Project = ViewModels.Project;
 

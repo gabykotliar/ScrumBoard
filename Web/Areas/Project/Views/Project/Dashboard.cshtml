@@ -1,10 +1,43 @@
-﻿@model ScrumBoard.Domain.Project
-
-@{
-    ViewBag.Title = Model.Name;
+﻿@{
+    ViewBag.Title = "Dashboard";
 }
 
 <hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
+    <h1 data-bind="text: projectName">@ViewBag.Title.</h1>
     <h2>Dashboard</h2>
 </hgroup>
+
+@section Scripts {
+   
+    <script src="~/Scripts/URI.min.js"></script>
+    <script src="~/Scripts/Utils.js"></script>
+    <script src="~/Scripts/ViewModels.js"></script>
+    
+
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+
+            //var uri = new URI(window.location);                        
+
+            //$.ajax('/api/project/' + uri.filename(),
+            //{
+            //    type: 'GET',
+            //    //contentType: "application/json;charset=utf-8",
+            //    //data: this.toJSON(),
+            //    accepts: 'JSON',
+            //    context: this,
+            //    success: function (data, textStatus, jqXHR) {                                       
+
+            //        $('h1').text(data.Name);
+
+            //        document.title = data.Name + ' - Dashboard';
+            //    },
+            //    error: function (jqXHR, textStatus, errorThrown) { 
+            //        new Utils.ErrorHandler().webApiError(jqXHR, textStatus, errorThrown);
+            //    }
+            //});
+
+        });
+    </script>
+}
