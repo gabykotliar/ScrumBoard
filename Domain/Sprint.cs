@@ -11,11 +11,13 @@ namespace ScrumBoard.Domain
             Stories = new Collection<UserStory>();
         }
 
+        public virtual int Id { get; set; }
+
         public virtual DateTime StartsAt { get; set; }
 
         public virtual DateTime EndsAt { get; set; }
 
-        public virtual Collection<UserStory> Stories { get; private set; }
+        public virtual Collection<UserStory> Stories { get; protected set; }
 
         public virtual double CommittedEffort
         {

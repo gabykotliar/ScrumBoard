@@ -19,9 +19,9 @@ namespace ScrumBoard.Domain
 
         public virtual string Vision { get; set; }
 
-        public virtual ProductBacklog Backlog { get; private set; }
+        public virtual IList<UserStory> Backlog { get; protected set; }
 
-        public virtual IList<Sprint> Sprints { get; private set; }
+        public virtual IList<Sprint> Sprints { get; protected set; }
 
         public virtual Team Team { get; protected set; }
     }

@@ -1,9 +1,8 @@
 ﻿using ScrumBoard.Domain;
+using ScrumBoard.Persistence;
 
 namespace ScrumBoard.Services.Implementation
 {
-    using ScrumBoard.Persistence;
-
     public class ProjectService : Services.ProjectService
     {
         private readonly ProjectRepository repository;

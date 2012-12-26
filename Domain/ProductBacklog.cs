@@ -1,8 +1,8 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
 
 namespace ScrumBoard.Domain
 {
-    public class ProductBacklog : Collection<UserStory>
+    public class ProductBacklog : List<UserStory>
     {
     }
 }

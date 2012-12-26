@@ -14,6 +14,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{47DB6FAA-D38E-44D6-8AED-6593FE10FC1C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{9C26B4B2-4E24-4D45-94CA-24E73BE72096}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BDB49945-CE34-4812-81F8-FDADE9DFBD6F} = {BDB49945-CE34-4812-81F8-FDADE9DFBD6F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{BDAC30B6-DD56-4FE4-87DF-8C6C740838FB}"
 EndProject

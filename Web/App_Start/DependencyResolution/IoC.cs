@@ -32,12 +32,16 @@ namespace ScrumBoard.Web.App_Start.DependencyResolution
 
                         scan.Assembly("ScrumBoard.Services.Implementation");
                         scan.Assembly("ScrumBoard.Persistence.Implementation");
-
+                        
                         scan.Convention<EquallyNamedTypeAndInterfaceConvention>();
 
                         scan.WithDefaultConventions();
+
+                        scan.Assembly("Common.Persistence.NHibernate");
                         scan.LookForRegistries();
                     }));
+
+            ObjectFactory.AssertConfigurationIsValid();
 
             return ObjectFactory.Container;
         }
