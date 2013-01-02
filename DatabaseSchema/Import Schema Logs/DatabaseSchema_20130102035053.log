@@ -1,0 +1,71 @@
+02/01/2013 12:50:53 p.m.	This log contains information about the import schema operation into project 'DatabaseSchema' on computer 'EZE4-DNN-00452' by user 'gustavo.rodriguez'.
+02/01/2013 12:50:54 p.m.	Import of database schema has started.
+02/01/2013 12:51:02 p.m.	Gathering database options
+02/01/2013 12:51:02 p.m.	Gathering users
+02/01/2013 12:51:02 p.m.	Gathering roles
+02/01/2013 12:51:02 p.m.	Gathering application roles
+02/01/2013 12:51:02 p.m.	Gathering role memberships
+02/01/2013 12:51:02 p.m.	Gathering filegroups
+02/01/2013 12:51:02 p.m.	Gathering full-text catalogs
+02/01/2013 12:51:02 p.m.	Gathering assemblies
+02/01/2013 12:51:02 p.m.	Gathering certificates
+02/01/2013 12:51:02 p.m.	Gathering asymmetric keys
+02/01/2013 12:51:02 p.m.	Gathering symmetric keys
+02/01/2013 12:51:02 p.m.	Gathering encrypted symmetric keys
+02/01/2013 12:51:02 p.m.	Gathering schemas
+02/01/2013 12:51:02 p.m.	Gathering XML schema collections
+02/01/2013 12:51:02 p.m.	Gathering user-defined data types
+02/01/2013 12:51:02 p.m.	Gathering user-defined types
+02/01/2013 12:51:02 p.m.	Gathering table types
+02/01/2013 12:51:02 p.m.	Gathering unique keys for table types
+02/01/2013 12:51:02 p.m.	Gathering primary keys for table types
+02/01/2013 12:51:02 p.m.	Gathering check constraints for table types
+02/01/2013 12:51:02 p.m.	Gathering default constraints for table types
+02/01/2013 12:51:02 p.m.	Gathering partition functions
+02/01/2013 12:51:02 p.m.	Gathering partition schemes
+02/01/2013 12:51:02 p.m.	Gathering functions
+02/01/2013 12:51:02 p.m.	Gathering encrypted functions
+02/01/2013 12:51:02 p.m.	Gathering aggregates
+02/01/2013 12:51:03 p.m.	Gathering procedures
+02/01/2013 12:51:03 p.m.	Gathering encrypted procedures
+02/01/2013 12:51:03 p.m.	Gathering tables
+02/01/2013 12:51:03 p.m.	Gathering primary keys
+02/01/2013 12:51:03 p.m.	Gathering unique constraints
+02/01/2013 12:51:03 p.m.	Gathering foreign keys
+02/01/2013 12:51:04 p.m.	Gathering default constraints
+02/01/2013 12:51:04 p.m.	Gathering check constraints
+02/01/2013 12:51:04 p.m.	Gathering views
+02/01/2013 12:51:04 p.m.	Gathering encrypted views
+02/01/2013 12:51:04 p.m.	Gathering indexes
+02/01/2013 12:51:04 p.m.	Gathering statistics
+02/01/2013 12:51:04 p.m.	Gathering full-text index stoplists
+02/01/2013 12:51:04 p.m.	Gathering full-text indexes
+02/01/2013 12:51:04 p.m.	Gathering spatial indexes
+02/01/2013 12:51:04 p.m.	Gathering XML indexes
+02/01/2013 12:51:04 p.m.	Gathering encrypted triggers
+02/01/2013 12:51:04 p.m.	Gathering triggers
+02/01/2013 12:51:04 p.m.	Gathering encrypted and clr ddl triggers
+02/01/2013 12:51:04 p.m.	Gathering ddl triggers
+02/01/2013 12:51:04 p.m.	Gathering synonyms
+02/01/2013 12:51:04 p.m.	Gathering defaults
+02/01/2013 12:51:04 p.m.	Gathering data constraint uddt bindings
+02/01/2013 12:51:04 p.m.	Gathering rules
+02/01/2013 12:51:04 p.m.	Gathering data constraint uddt bindings
+02/01/2013 12:51:04 p.m.	Gathering message types
+02/01/2013 12:51:04 p.m.	Gathering queues
+02/01/2013 12:51:04 p.m.	Gathering contracts
+02/01/2013 12:51:04 p.m.	Gathering services
+02/01/2013 12:51:04 p.m.	Gathering event notifications
+02/01/2013 12:51:04 p.m.	Gathering remote service bindings
+02/01/2013 12:51:04 p.m.	Gathering broker priorities
+02/01/2013 12:51:04 p.m.	Gathering signatures
+02/01/2013 12:51:04 p.m.	Gathering data compression options
+02/01/2013 12:51:04 p.m.	Gathering extended properties
+02/01/2013 12:51:05 p.m.	Gathering credentials
+02/01/2013 12:51:05 p.m.	Gathering logins
+02/01/2013 12:51:05 p.m.	Gathering server audits
+02/01/2013 12:51:05 p.m.	Scanning project for duplicate elements
+02/01/2013 12:51:05 p.m.	Finished duplicate element processing
+02/01/2013 12:51:06 p.m.	Finished importing database.
+02/01/2013 12:51:06 p.m.	A summary of the import was saved to the following location: C:\Projects\ScrumBoard\DatabaseSchema\Import Schema Logs\DatabaseSchema_20130102035053.log
+02/01/2013 12:51:06 p.m.	Click Finish to continue...
