@@ -45,17 +45,36 @@ var ViewModels;
             function NewProjectViewModel(options) {
                         _super.call(this, options);
                 this.options = options;
+                this.suggestOn = true;
+                var self = this;
                 this.Name = ko.observable('');
                 this.Vision = ko.observable('');
+                this.Code = ko.computed({
+                    read: self.getCode,
+                    write: self.setManualCode,
+                    owner: this
+                });
             }
             NewProjectViewModel.prototype.toJSON = function () {
                 return JSON.stringify({
+                    Code: this.Code(),
                     Name: this.Name(),
                     Vision: this.Vision()
                 });
             };
             NewProjectViewModel.prototype.onResourceCreated = function (data, textStatus, jqXHR) {
                 window.location.href = this.options.successRedirectUrl.replace("[id]", data.Name);
+            };
+            NewProjectViewModel.prototype.getCode = function () {
+                if(this.suggestOn) {
+                    this.code = this.Name().replace(/[[\]{}()*+?.,\\^$|#\s]+/g, '_');
+                }
+                ; ;
+                return this.code;
+            };
+            NewProjectViewModel.prototype.setManualCode = function (value) {
+                this.suggestOn = false;
+                this.code = value;
             };
             return NewProjectViewModel;
         })(NewResourceViewModel);

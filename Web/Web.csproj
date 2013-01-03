@@ -257,6 +257,13 @@
     <Content Include="Areas\Project\Views\Web.config" />
     <Content Include="Areas\Project\Views\_ViewStart.cshtml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <TypeScriptCompile Include="Scripts\Constants.ts" />
+    <Content Include="Scripts\Constants.js">
+      <DependentUpon>Constants.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Constants.min.js">
+      <DependentUpon>Constants.ts</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
