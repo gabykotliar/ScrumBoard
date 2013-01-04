@@ -62,7 +62,7 @@ namespace ScrumBoard.Tests.Web.Api
             var controller = GetApiProjectController(new Mock<ProjectService>());
 
             var mock = new Mock<NewProject>();
-            mock.Setup(m => m.ToEntity()).Returns(new Project{ Id = 123 });
+            mock.Setup(m => m.ToEntity()).Returns(new Project { Id = 123 });
 
             var response = controller.Post(mock.Object);
 

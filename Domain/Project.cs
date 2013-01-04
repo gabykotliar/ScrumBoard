@@ -16,6 +16,9 @@ namespace ScrumBoard.Domain
         public virtual int Id { get; set; }
 
         [Required]
+        public virtual string Code { get; set; }
+
+        [Required]
         public virtual string Name { get; set; }
 
         public virtual string Vision { get; set; }

@@ -38,5 +38,17 @@ namespace ScrumBoard.Web.Controllers.Api
             string uri = Url.Link("DefaultApi", new { id = project.Id });
             response.Headers.Location = new Uri(uri);
         }
+
+        public HttpResponseMessage Get(string id)
+        {
+            var projectKey = id;
+
+            return Request.CreateResponse(HttpStatusCode.OK, new Project
+                                                                        {
+                                                                            Id = 1234, 
+                                                                            Name = projectKey.Replace("-", " "),
+                                                                            Vision = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                                                        });
+        }
     }
 }

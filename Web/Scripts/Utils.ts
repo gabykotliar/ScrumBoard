@@ -1,3 +1,6 @@
+/// <reference path="jquery.d.ts" />
+/// <reference path="URI.d.ts" />
+
 module Utils 
 { 
     export class ErrorHandler 
@@ -54,6 +57,22 @@ module Utils
             }
 
             return msg;
+        }
+    }
+
+    export class UriHelper { 
+
+        private static _current: any;
+
+        private static current() { 
+            if (!this._current)
+                this._current = new URI(window.location.href);
+
+            return this._current;
+        }
+
+        static currentFile() { 
+            return this.current().filename();
         }
     }
 }

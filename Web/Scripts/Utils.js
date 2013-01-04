@@ -39,5 +39,20 @@ var Utils;
         };
         return ApiErrorResponse;
     })();    
+    var UriHelper = (function () {
+        function UriHelper() { }
+        UriHelper._current = undefined;
+        UriHelper.current = function current() {
+            if(!this._current) {
+                this._current = new URI(window.location.href);
+            }
+            return this._current;
+        }
+        UriHelper.currentFile = function currentFile() {
+            return this.current().filename();
+        }
+        return UriHelper;
+    })();
+    Utils.UriHelper = UriHelper;    
 })(Utils || (Utils = {}));
 

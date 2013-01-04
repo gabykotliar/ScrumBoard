@@ -45,6 +45,10 @@
     <Reference Include="Common.Infrastructure.IoC.StructureMap">
       <HintPath>..\.References\Common.Infrastructure.IoC.StructureMap.dll</HintPath>
     </Reference>
+    <Reference Include="Common.Web.MVC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\.References\Common.Web.MVC.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -59,6 +63,8 @@
       <HintPath>..\packages\CommonServiceLocator.StructureMapAdapter.1.1.0.3\lib\StructureMapAdapter.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -272,6 +278,13 @@
     <Content Include="Areas\Project\Views\Web.config" />
     <Content Include="Areas\Project\Views\_ViewStart.cshtml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <TypeScriptCompile Include="Scripts\Constants.ts" />
+    <Content Include="Scripts\Constants.js">
+      <DependentUpon>Constants.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Constants.min.js">
+      <DependentUpon>Constants.ts</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -284,6 +297,11 @@
     <Content Include="Scripts\knockout-2.2.d.js">
       <DependentUpon>knockout-2.2.d.ts</DependentUpon>
     </Content>
+    <TypeScriptCompile Include="Scripts\URI.d.ts" />
+    <Content Include="Scripts\URI.d.js">
+      <DependentUpon>URI.d.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\URI.min.js" />
     <Content Include="Scripts\Utils.js">
       <DependentUpon>Utils.ts</DependentUpon>
     </Content>
@@ -299,6 +317,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <TypeScriptCompile Include="Scripts\ViewModels.ts" />
+    <Content Include="Scripts\Utils.min.js">
+      <DependentUpon>Utils.ts</DependentUpon>
+    </Content>
     <Content Include="Scripts\ViewModels.js">
       <DependentUpon>ViewModels.ts</DependentUpon>
     </Content>

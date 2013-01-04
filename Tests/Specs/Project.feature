@@ -15,6 +15,10 @@ Scenario: A project should have a vision
 	Given I have a project
 	Then I should be able to assign a 'Vision' as a text
 
+Scenario: A project should have a code
+	Given I have a project
+	Then I should be able to assign a 'Code' as a text
+
 Scenario: A project should have a backlog
 	Given I have a project	
 	Then It should have a backlog

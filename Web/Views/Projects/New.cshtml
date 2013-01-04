@@ -17,11 +17,15 @@
         <ol>
             <li>
                 @Html.LabelFor(m => m.Name, "Name")
-                @Html.TextBoxFor(m => m.Name, new Dictionary<string, object> { {"data-bind", "value: Name"} })
+                @Html.DataBindedTextBoxFor(m => m.Name, new Dictionary<string, object> {{"valueUpdate", "'afterkeydown'"}}) 
             </li>
             <li>
                 @Html.LabelFor(m => m.Vision, "Vision")
-                @Html.TextAreaFor(m => m.Vision, new Dictionary<string, object> { {"data-bind", "text: Vision"} })
+                @Html.DataBindedTextAreaFor(m => m.Vision)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Name, "Code")
+                @Html.DataBindedTextBoxFor(m => m.Code)
             </li>
         </ol>
         <input id="submit" data-bind="click: create" type="button" value="Create" />
@@ -42,7 +46,7 @@
 
             var viewModel = new ViewModels.Project.NewProjectViewModel({
                 apiPostUrl: '/api/project',
-                successRedirectUrl: '@Url.Action("Dashboard", "Project", new { Area = "Project", Id = "[id]"})'
+                successRedirectUrl: '@Url.Action("Dashboard", "Project", new { Area = "Project", projectKey = "[id]"})'
             });
 
             viewModel.initialize();                       

@@ -63,16 +63,29 @@ module ViewModels.Project
     export class NewProjectViewModel 
         extends NewResourceViewModel {
 
-        Name = ko.observable('');
-        Vision = ko.observable('');
+        Code: KnockoutComputed;
+        Name: KnockoutObservableString;
+        Vision: KnockoutObservableString;
+        
+        private suggestOn = true;
+        private code: string;
 
         constructor (public options: NewProjectViewModelConfigurationOptions) {
             super(options);
+
+            var self = this;
+
+            this.Name = ko.observable('');
+            this.Vision = ko.observable('');
+            this.Code = ko.computed({ read: self.getCode, 
+                                      write: self.setManualCode, 
+                                      owner: this });
         }
 
         toJSON(): string {
 
             return JSON.stringify({
+                Code: this.Code(),
                 Name: this.Name(),
                 Vision: this.Vision()
             });
@@ -80,6 +93,51 @@ module ViewModels.Project
 
         onResourceCreated(data: any, textStatus: string, jqXHR: JQueryXHR) { 
             window.location.href = this.options.successRedirectUrl.replace("[id]", data.Name);
+        }
+
+        getCode(): string { 
+
+            if (this.suggestOn) { 
+                this.code = this.Name().replace(/[[\]{}()*+?.,\\^$|#\s]+/g, '_');
+            };
+
+            return this.code;
+        }
+
+        setManualCode(value: any) { 
+
+            this.suggestOn = false;
+
+            this.code = value;
+        }
+    }
+
+    export class DashboardViewModel { 
+
+        projectName = '';
+        projectVision = '';
+
+        initialize() { 
+
+            var self = this;
+
+            $.ajax('/api/project/' + Utils.UriHelper.currentFile(),
+            {
+                type: 'GET',                
+                accepts: 'JSON',
+                context: this,
+                success: function (project, textStatus, jqXHR) {                                       
+
+                    self.projectName = project.Name;
+
+                    ko.applyBindings(this);
+
+                    document.title = project.Name + ' - Dashboard';
+                },
+                error: function (jqXHR, textStatus, errorThrown) { 
+                    new Utils.ErrorHandler().webApiError(jqXHR, textStatus, errorThrown);
+                }
+            });
         }
     }
 }
