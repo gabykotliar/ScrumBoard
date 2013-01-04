@@ -23,6 +23,7 @@ namespace ScrumBoard.Tests.Persistence.Mappings
         public void ProjectMappingTest()
         {
             new PersistenceSpecification<Project>(SessionUtil.GetNewSession()).CheckProperty(x => x.Name, "Test Project")
+                                                                              .CheckProperty(x => x.Code, "Test_Project")
                                                                               .CheckProperty(x => x.Vision, "Test Project Vision")
                                                                               .VerifyTheMappings();
         }
@@ -32,7 +33,7 @@ namespace ScrumBoard.Tests.Persistence.Mappings
         {
             new PersistenceSpecification<Sprint>(SessionUtil.GetNewSession()).CheckProperty(x => x.StartsAt, new DateTime(2013, 1, 1))
                                                                              .CheckProperty(x => x.EndsAt, new DateTime(2013, 1, 2))
-                                                                             .CheckReference(x => x.Project, new Project() { Name = "Test Project 2", Vision = "Test Project Vision 2" }, new EntityEqualityComparer<Project>())
+                                                                             .CheckReference(x => x.Project, new Project() { Name = "Test Project 2", Code = "Test_Project_2", Vision = "Test Project Vision 2" }, new EntityEqualityComparer<Project>())
                                                                              .VerifyTheMappings();
         }
 
@@ -48,14 +49,14 @@ namespace ScrumBoard.Tests.Persistence.Mappings
             new PersistenceSpecification<UserStory>(SessionUtil.GetNewSession()).CheckProperty(x => x.Text, "User Story Text")
                                                                                 .CheckProperty(x => x.Effort, (double)1)
                                                                                 .CheckProperty(x => x.IsDone, false)
-                                                                                .CheckReference(x => x.Project, new Project() { Name = "Test Project 2", Vision = "Test Project Vision 2" }, new EntityEqualityComparer<Project>())
+                                                                                .CheckReference(x => x.Project, new Project() { Name = "Test Project 2", Code = "Test_Project_2", Vision = "Test Project Vision 2" }, new EntityEqualityComparer<Project>())
                                                                                 .VerifyTheMappings();
         }
 
         [TestMethod]
         public void UserStoryWithSprintMappingTest()
         {
-            var project = new Project() { Name = "Test Project 3", Vision = "Test Project Vision 3" };
+            var project = new Project() { Name = "Test Project 3", Code = "Test_Project_3", Vision = "Test Project Vision 3" };
             new PersistenceSpecification<UserStory>(SessionUtil.GetNewSession()).CheckProperty(x => x.Text, "User Story Text")
                                                                                 .CheckProperty(x => x.Effort, (double)1)
                                                                                 .CheckProperty(x => x.IsDone, false)

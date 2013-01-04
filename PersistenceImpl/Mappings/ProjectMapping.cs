@@ -9,6 +9,7 @@ namespace ScrumBoard.Persistence.Implementation.Mappings
         {
             Id(x => x.Id).GeneratedBy.Identity();
             Map(x => x.Name);
+            Map(x => x.Code);
             Map(x => x.Vision);
             HasMany(x => x.Backlog).KeyColumn("ProjectId");
             HasMany(x => x.Sprints).KeyColumn("ProjectId");
