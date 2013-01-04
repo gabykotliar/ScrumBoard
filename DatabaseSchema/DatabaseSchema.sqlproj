@@ -8,12 +8,12 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{505ff11c-547d-4bfb-9e9c-bf3d114cae5d}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>DatabaseSchema</RootNamespace>
-    <AssemblyName>DatabaseSchema</AssemblyName>
+    <RootNamespace>ScrumBoard.DatabaseSchema</RootNamespace>
+    <AssemblyName>Scrumboard.DatabaseSchema</AssemblyName>
     <ModelCollation>3082,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>

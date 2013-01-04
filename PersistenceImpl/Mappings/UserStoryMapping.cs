@@ -3,14 +3,15 @@ using ScrumBoard.Domain;
 
 namespace ScrumBoard.Persistence.Implementation.Mappings
 {
-    public class SprintMapping : ClassMap<Sprint>
+    public class UserStoryMapping : ClassMap<UserStory>
     {
-        public SprintMapping()
+        public UserStoryMapping()
         {
             Id(x => x.Id).GeneratedBy.Identity();
-            Map(x => x.StartsAt);
-            Map(x => x.EndsAt);
-            HasMany(x => x.Stories).KeyColumn("SprintId");
+            Map(x => x.Effort);
+            Map(x => x.IsDone);
+            Map(x => x.Text);
+            References(x => x.Sprint).Column("SprintId").Nullable();
             References(x => x.Project).Column("ProjectId");
         }
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
@@ -17,7 +18,9 @@ namespace ScrumBoard.Domain
 
         public virtual DateTime EndsAt { get; set; }
 
-        public virtual Collection<UserStory> Stories { get; protected set; }
+        public virtual ICollection<UserStory> Stories { get; protected set; }
+
+        public virtual Project Project { get; set; }
 
         public virtual double CommittedEffort
         {

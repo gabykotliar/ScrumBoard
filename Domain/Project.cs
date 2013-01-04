@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace ScrumBoard.Domain
@@ -8,7 +9,7 @@ namespace ScrumBoard.Domain
         public Project()
         {
             Backlog = new ProductBacklog();
-            Sprints = new List<Sprint>();
+            Sprints = new Collection<Sprint>();
             Team = new Team();
         }
         
@@ -19,9 +20,9 @@ namespace ScrumBoard.Domain
 
         public virtual string Vision { get; set; }
 
-        public virtual IList<UserStory> Backlog { get; protected set; }
+        public virtual ICollection<UserStory> Backlog { get; protected set; }
 
-        public virtual IList<Sprint> Sprints { get; protected set; }
+        public virtual ICollection<Sprint> Sprints { get; protected set; }
 
         public virtual Team Team { get; protected set; }
     }

@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mappings\UserStoryMapping.cs" />
     <Compile Include="Mappings\ProjectMapping.cs" />
     <Compile Include="Mappings\SprintMapping.cs" />
     <Compile Include="ProjectRepository.cs" />

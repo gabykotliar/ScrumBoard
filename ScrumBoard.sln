@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specs", "Tests\Specs\Specs.csproj", "{5547D947-7C32-4C5B-B73E-2960F351882A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests\Tests.csproj", "{CE046A97-C355-46BF-A9E0-0CEDCDB9853E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{505FF11C-547D-4BFB-9E9C-BF3D114CAE5D} = {505FF11C-547D-4BFB-9E9C-BF3D114CAE5D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesImpl", "ServicesImpl\ServicesImpl.csproj", "{C2DDCD69-74B0-46DF-9E9D-EB0596DB5F7C}"
 EndProject
