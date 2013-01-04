@@ -1,7 +1,4 @@
-﻿using FluentNHibernate.Testing;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ScrumBoard.Domain;
-using ScrumBoard.Tests.Persistence.Mappings;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ScrumBoard.Tests.Persistence
 {

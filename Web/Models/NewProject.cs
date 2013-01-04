@@ -14,7 +14,7 @@ namespace ScrumBoard.Web.Models
 
         public string Vision { get; set; }
 
-        public Project ToEntity()
+        public virtual Project ToEntity()
         {
             return new Project
                 {
