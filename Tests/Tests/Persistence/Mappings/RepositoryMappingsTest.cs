@@ -10,6 +10,7 @@ namespace ScrumBoard.Tests.Persistence.Mappings
     [TestClass]
     public class RepositoryMappingsTest
     {
+
         [ClassInitialize]
         public static void DeployDatabase(TestContext testContext)
         {
@@ -25,6 +26,7 @@ namespace ScrumBoard.Tests.Persistence.Mappings
             BuilderSetup.DisablePropertyNamingFor<Team, int>(o => o.Id);
             BuilderSetup.DisablePropertyNamingFor<UserStory, int>(o => o.Id);
         }         
+
 
         [TestMethod]
         public void ProjectMappingTest()

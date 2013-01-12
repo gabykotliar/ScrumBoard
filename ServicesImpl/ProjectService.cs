@@ -14,7 +14,12 @@ namespace ScrumBoard.Services.Implementation
 
         public void Create(Project project)
         {
-            this.repository.SaveOrUpdate(project);            
+            repository.SaveOrUpdate(project);            
+        }
+
+        public Project GetByCode(string code)
+        {
+            return repository.Get(p => p.Code == code);
         }
     }
 }

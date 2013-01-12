@@ -41,14 +41,7 @@ namespace ScrumBoard.Web.Controllers.Api
 
         public HttpResponseMessage Get(string id)
         {
-            var projectKey = id;
-
-            return Request.CreateResponse(HttpStatusCode.OK, new Project
-                                                                        {
-                                                                            Id = 1234, 
-                                                                            Name = projectKey.Replace("-", " "),
-                                                                            Vision = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                                                                        });
+            return Request.CreateResponse(HttpStatusCode.OK, service.GetByCode(id));
         }
     }
 }
