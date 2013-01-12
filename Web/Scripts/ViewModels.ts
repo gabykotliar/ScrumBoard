@@ -92,7 +92,7 @@ module ViewModels.Project
         }
 
         onResourceCreated(data: any, textStatus: string, jqXHR: JQueryXHR) { 
-            window.location.href = this.options.successRedirectUrl.replace("[id]", data.Name);
+            window.location.href = this.options.successRedirectUrl.replace("[id]", data.Code);
         }
 
         getCode(): string { 

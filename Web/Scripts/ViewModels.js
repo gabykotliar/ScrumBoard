@@ -63,7 +63,7 @@ var ViewModels;
                 });
             };
             NewProjectViewModel.prototype.onResourceCreated = function (data, textStatus, jqXHR) {
-                window.location.href = this.options.successRedirectUrl.replace("[id]", data.Name);
+                window.location.href = this.options.successRedirectUrl.replace("[id]", data.Code);
             };
             NewProjectViewModel.prototype.getCode = function () {
                 if(this.suggestOn) {
