@@ -198,27 +198,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <InjectedDependencies Include="..\PersistenceImpl\bin\Debug\ScrumBoard.Persistence.Implementation.dll">
-      <Link>ScrumBoard.Persistence.ImplementationASAS.dll</Link>
-    </InjectedDependencies>
-    <InjectedDependencies Include="..\PersistenceImpl\bin\Debug\ScrumBoard.Persistence.dll">
-      <Link>ScrumBoard.Persistence.dll</Link>
-    </InjectedDependencies>
-    <InjectedDependencies Include="..\PersistenceImpl\bin\Debug\FluentNHibernate.dll">
-      <Link>FluentNHibernate.dll</Link>
-    </InjectedDependencies>
-    <InjectedDependencies Include="..\PersistenceImpl\bin\Debug\NHibernate.dll">
-      <Link>NHibernate.dll</Link>
-    </InjectedDependencies>
-    <InjectedDependencies Include="..\PersistenceImpl\bin\Debug\Iesi.Collections.dll">
-      <Link>Iesi.Collections.dll</Link>
-    </InjectedDependencies>
-    <InjectedDependencies Include="..\.References\Common.dll">
-      <Link>Common.dll</Link>
-    </InjectedDependencies>
-    <InjectedDependencies Include="..\.References\Common.Persistence.NHibernate.dll">
-      <Link>Common.Persistence.NHibernate.dll</Link>
-    </InjectedDependencies>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -277,6 +256,8 @@
     <Content Include="Global.asax" />
     <Content Include="Areas\Project\Views\Web.config" />
     <Content Include="Areas\Project\Views\_ViewStart.cshtml" />
+    <None Include="Properties\PublishProfiles\ScrumBoard - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ScrumBoard - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <TypeScriptCompile Include="Scripts\Constants.ts" />
     <Content Include="Scripts\Constants.js">
@@ -369,7 +350,38 @@
   </ItemGroup>
   <ItemGroup>
     <!-- This ItemGroup was manually generated to hold the assemblies included by dependency injection that are not automatically copied to the output folder -->
-    <InjectedDependencies Include="$(SolutionDir)ServicesImpl\bin\$(ConfigurationName)\ScrumBoard.Services.Implementation.dll" />
+    <Content Include="$(SolutionDir)ServicesImpl\bin\$(ConfigurationName)\ScrumBoard.Services.Implementation.dll">
+      <Link>ScrumBoard.Services.Implementation.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(SolutionDir)\PersistenceImpl\bin\$(ConfigurationName)\ScrumBoard.Persistence.Implementation.dll">
+      <Link>ScrumBoard.Persistence.Implementation.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(SolutionDir)\PersistenceImpl\bin\$(ConfigurationName)\ScrumBoard.Persistence.dll">
+      <Link>ScrumBoard.Persistence.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(SolutionDir)\PersistenceImpl\bin\$(ConfigurationName)\FluentNHibernate.dll">
+      <Link>FluentNHibernate.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(SolutionDir)\PersistenceImpl\bin\$(ConfigurationName)\NHibernate.dll">
+      <Link>NHibernate.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(SolutionDir)\PersistenceImpl\bin\$(ConfigurationName)\Iesi.Collections.dll">
+      <Link>Iesi.Collections.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\.References\Common.dll">
+      <Link>Common.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\.References\Common.Persistence.NHibernate.dll">
+      <Link>Common.Persistence.NHibernate.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">
@@ -413,12 +425,12 @@
   <Target Name="BeforeBuild">
     <Exec Command="&quot;$(PROGRAMFILES)\Microsoft SDKs\TypeScript\0.8.0.0\tsc&quot; @(TypeScriptCompile ->'&quot;%(fullpath)&quot;', ' ')" />
   </Target>
-  <Target Name="AfterBuild">
-    <Message Text="----------- Build Completed -----------" Importance="high">
+  <!-- Target Name="AfterBuild">
+    <Message Text="*** Build Completed ***" Importance="high">
     </Message>
     <Message Text="Copying injected dependency files." Importance="high">
     </Message>
     <Copy SourceFiles="@(InjectedDependencies)" DestinationFolder="$(TargetDir)">
     </Copy>
-  </Target>
+  </Target -->
 </Project>
