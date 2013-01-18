@@ -185,6 +185,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Project\Controllers\ProjectController.cs" />
     <Compile Include="Areas\Project\ProjectAreaRegistration.cs" />
+    <Compile Include="Controllers\Api\MatiController.cs" />
     <Compile Include="Controllers\Api\ProjectController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="App_Start\DependencyResolution\IoC.cs" />
@@ -259,6 +260,12 @@
     <None Include="Properties\PublishProfiles\ScrumBoard - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\ScrumBoard - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\ViewModels.js.map">
+      <DependentUpon>ViewModels.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Utils.js.map">
+      <DependentUpon>Utils.ts</DependentUpon>
+    </Content>
     <TypeScriptCompile Include="Scripts\Constants.ts" />
     <Content Include="Scripts\Constants.js">
       <DependentUpon>Constants.ts</DependentUpon>
@@ -424,7 +431,7 @@
   </ProjectExtensions>
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <Target Name="BeforeBuild">
-    <Exec Command="&quot;$(PROGRAMFILES)\Microsoft SDKs\TypeScript\0.8.0.0\tsc&quot; @(TypeScriptCompile ->'&quot;%(fullpath)&quot;', ' ')" />
+    <Exec Command="&quot;$(PROGRAMFILES)\Microsoft SDKs\TypeScript\0.8.1.1\tsc&quot; @(TypeScriptCompile ->'&quot;%(fullpath)&quot;', ' ')" />
   </Target>
   <!-- Target Name="AfterBuild">
     <Message Text="*** Build Completed ***" Importance="high">

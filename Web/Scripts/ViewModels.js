@@ -2,7 +2,7 @@ var __extends = this.__extends || function (d, b) {
     function __() { this.constructor = d; }
     __.prototype = b.prototype;
     d.prototype = new __();
-}
+};
 var ViewModels;
 (function (ViewModels) {
     (function (Project) {
@@ -39,7 +39,8 @@ var ViewModels;
                 new Utils.ErrorHandler().webApiError(jqXHR, textStatus, errorThrown);
             };
             return NewResourceViewModel;
-        })();        
+        })();
+        Project.NewResourceViewModel = NewResourceViewModel;        
         var NewProjectViewModel = (function (_super) {
             __extends(NewProjectViewModel, _super);
             function NewProjectViewModel(options) {
@@ -57,7 +58,7 @@ var ViewModels;
             }
             NewProjectViewModel.prototype.toJSON = function () {
                 return JSON.stringify({
-                    Code: this.Code(),
+                    Code: this.getCode(),
                     Name: this.Name(),
                     Vision: this.Vision()
                 });
@@ -105,6 +106,4 @@ var ViewModels;
         Project.DashboardViewModel = DashboardViewModel;        
     })(ViewModels.Project || (ViewModels.Project = {}));
     var Project = ViewModels.Project;
-
 })(ViewModels || (ViewModels = {}));
-

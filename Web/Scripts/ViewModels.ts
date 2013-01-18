@@ -9,9 +9,9 @@ interface ValidatableForm extends JQuery
 
 module ViewModels.Project 
 {
-    interface NewViewModelConfigurationOptions { apiPostUrl: string; }
+    export interface NewViewModelConfigurationOptions { apiPostUrl: string; }
 
-    class NewResourceViewModel { 
+    export class NewResourceViewModel { 
 
         form: ValidatableForm;
 
@@ -54,7 +54,7 @@ module ViewModels.Project
         }
     }
     
-    interface NewProjectViewModelConfigurationOptions 
+    export interface NewProjectViewModelConfigurationOptions 
         extends NewViewModelConfigurationOptions 
     { 
         successRedirectUrl: string; 
@@ -85,7 +85,7 @@ module ViewModels.Project
         toJSON(): string {
 
             return JSON.stringify({
-                Code: this.Code(),
+                Code: this.getCode(),
                 Name: this.Name(),
                 Vision: this.Vision()
             });
@@ -96,7 +96,7 @@ module ViewModels.Project
         }
 
         getCode(): string { 
-
+            
             if (this.suggestOn) { 
                 this.code = this.Name().replace(/[[\]{}()*+?.,\\^$|#\s]+/g, '_');
             };
