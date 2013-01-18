@@ -43,6 +43,12 @@
         </footer>
 
         @Scripts.Render("~/bundles/jquery")
+        
+         <script type="text/javascript" id="cndFallback">
+             (window.jQuery || document.write('<script src="/scripts/jquery-1.7.1.min.js"><\/script>'));
+
+        </script> 
+
         @RenderSection("scripts", required: false)
     </body>
 </html>
