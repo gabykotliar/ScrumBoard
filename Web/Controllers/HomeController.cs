@@ -2,6 +2,7 @@
 
 namespace ScrumBoard.Web.Controllers
 {
+    [OutputCache(CacheProfile = "fullStatic")]
     public class HomeController : Controller
     {
         public ActionResult Index()
