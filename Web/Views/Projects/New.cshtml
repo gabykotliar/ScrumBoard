@@ -28,7 +28,7 @@
                 @Html.DataBindedTextBoxFor(m => m.Code)
             </li>
         </ol>
-        <input id="submit" data-bind="click: create" type="button" value="Create" />
+        <input id="submit" data-bind="click: create, value: CommandText, enable: EnableSend" type="button" value="Create" />
     </fieldset>
 }
 

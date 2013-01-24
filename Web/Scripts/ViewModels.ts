@@ -15,8 +15,17 @@ module ViewModels.Project
 
         form: ValidatableForm;
 
+        CommandText: KnockoutObservableString;
+        EnableSend: KnockoutObservableBool;
+        
+        private enabledCommandText = 'Create';
+        private disabledCommandText = 'Please wait...';
+
         constructor (public options: NewViewModelConfigurationOptions) {
             this.form = <ValidatableForm>$('form');
+
+            this.CommandText = ko.observable(this.enabledCommandText);
+            this.EnableSend = ko.observable(true);
         }
 
         initialize() { 
@@ -27,6 +36,9 @@ module ViewModels.Project
 
             if (!this.form.valid()) return false;
 
+            this.CommandText(this.disabledCommandText);
+            this.EnableSend(false);
+
             $.ajax(this.options.apiPostUrl,
             {
                 type: 'POST',
@@ -35,7 +47,8 @@ module ViewModels.Project
                 accepts: 'JSON',
                 context: this,
                 success: this.onResourceCreated,
-                error: this.onError
+                error: this.onError,
+                complete: this.onCallComplete
             });
 
             return false; //cancel default event
@@ -43,6 +56,11 @@ module ViewModels.Project
 
         toJSON(): string {
             return '{}';
+        }
+
+        onCallComplete() { 
+            this.CommandText(this.enabledCommandText);
+            this.EnableSend(true);
         }
 
         onResourceCreated(data: any, textStatus: string, jqXHR: JQueryXHR) { 
@@ -66,7 +84,7 @@ module ViewModels.Project
         Code: KnockoutComputed;
         Name: KnockoutObservableString;
         Vision: KnockoutObservableString;
-        
+
         private suggestOn = true;
         private code: string;
 
@@ -76,7 +94,8 @@ module ViewModels.Project
             var self = this;
 
             this.Name = ko.observable('');
-            this.Vision = ko.observable('');
+            this.Vision = ko.observable('');            
+
             this.Code = ko.computed({ read: self.getCode, 
                                       write: self.setManualCode, 
                                       owner: this });

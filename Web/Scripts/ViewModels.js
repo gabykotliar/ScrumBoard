@@ -9,7 +9,11 @@ var ViewModels;
         var NewResourceViewModel = (function () {
             function NewResourceViewModel(options) {
                 this.options = options;
+                this.enabledCommandText = 'Create';
+                this.disabledCommandText = 'Please wait...';
                 this.form = $('form');
+                this.CommandText = ko.observable(this.enabledCommandText);
+                this.EnableSend = ko.observable(true);
             }
             NewResourceViewModel.prototype.initialize = function () {
                 ko.applyBindings(this);
@@ -18,6 +22,8 @@ var ViewModels;
                 if(!this.form.valid()) {
                     return false;
                 }
+                this.CommandText(this.disabledCommandText);
+                this.EnableSend(false);
                 $.ajax(this.options.apiPostUrl, {
                     type: 'POST',
                     contentType: "application/json;charset=utf-8",
@@ -25,12 +31,17 @@ var ViewModels;
                     accepts: 'JSON',
                     context: this,
                     success: this.onResourceCreated,
-                    error: this.onError
+                    error: this.onError,
+                    complete: this.onCallComplete
                 });
                 return false;
             };
             NewResourceViewModel.prototype.toJSON = function () {
                 return '{}';
+            };
+            NewResourceViewModel.prototype.onCallComplete = function () {
+                this.CommandText(this.enabledCommandText);
+                this.EnableSend(true);
             };
             NewResourceViewModel.prototype.onResourceCreated = function (data, textStatus, jqXHR) {
                 alert(jqXHR.statusText);
