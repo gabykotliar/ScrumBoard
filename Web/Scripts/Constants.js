@@ -6,4 +6,3 @@ var Constants;
     })();
     Constants.Urls = Urls;    
 })(Constants || (Constants = {}));
-

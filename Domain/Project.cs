@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ScrumBoard.Domain
 {
-    public class Project 
+    public class Project
     {        
         public Project()
         {

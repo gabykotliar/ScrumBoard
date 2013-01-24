@@ -185,7 +185,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Project\Controllers\ProjectController.cs" />
     <Compile Include="Areas\Project\ProjectAreaRegistration.cs" />
-    <Compile Include="Controllers\Api\MatiController.cs" />
     <Compile Include="Controllers\Api\ProjectController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="App_Start\DependencyResolution\IoC.cs" />

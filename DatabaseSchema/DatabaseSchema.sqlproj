@@ -67,4 +67,7 @@
     <Build Include="dbo\Tables\UserStory.sql" />
     <Build Include="dbo\Tables\Team.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Local.publish.xml" />
+  </ItemGroup>
 </Project>

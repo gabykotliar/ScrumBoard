@@ -1,6 +1,7 @@
-﻿using System.Net;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Net;
 using System.Net.Http;
-using System.Web.Http.ModelBinding;
 using System.Web.Http.Routing;
 
 using FluentAssertions;
@@ -35,7 +36,9 @@ namespace ScrumBoard.Tests.Web.Api
             var project = new Project();
             var serviceMock = new Mock<ProjectService>();
 
-            serviceMock.Setup(s => s.Create(project));
+            var validationErrors = It.IsAny<ICollection<ValidationResult>>();
+
+            serviceMock.Setup(s => s.TryCreate(project, out validationErrors));
 
             var controller = GetApiProjectController(serviceMock);
 

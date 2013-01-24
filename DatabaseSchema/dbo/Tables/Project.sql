@@ -5,6 +5,7 @@
     [Vision] NVARCHAR (2000) NULL,
     [TeamId] INT             NULL,    
     CONSTRAINT [PK__Project] PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_Project_Team] FOREIGN KEY ([TeamId]) REFERENCES [dbo].[Team] ([Id])
+    CONSTRAINT [FK_Project_Team] FOREIGN KEY ([TeamId]) REFERENCES [dbo].[Team] ([Id]), 
+    CONSTRAINT [AK_Project_Code] UNIQUE ([Code]) 
 );
 
