@@ -49,6 +49,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\.References\Common.Web.MVC.dll</HintPath>
     </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah.Mvc">
+      <HintPath>..\packages\Elmah.MVC.2.0.2\lib\net40\Elmah.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -185,7 +192,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Project\Controllers\ProjectController.cs" />
     <Compile Include="Areas\Project\ProjectAreaRegistration.cs" />
-    <Compile Include="Controllers\Api\MatiController.cs" />
     <Compile Include="Controllers\Api\ProjectController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="App_Start\DependencyResolution\IoC.cs" />
