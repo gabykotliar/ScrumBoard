@@ -1,0 +1,53 @@
+﻿@using Common.Web.Mvc.Html
+@using System.Web.Mvc.Ajax
+@model ScrumBoard.Domain.Project
+
+@{
+    ViewBag.Title = "New Project";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Create a new project.</h2>
+</hgroup>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Name, "Name")
+                @Html.DataBindedTextBoxFor(m => m.Name, new Dictionary<string, object> {{"valueUpdate", "'afterkeydown'"}}) 
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Vision, "Vision")
+                @Html.DataBindedTextAreaFor(m => m.Vision)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Name, "Code")
+                @Html.DataBindedTextBoxFor(m => m.Code)
+            </li>
+        </ol>
+        <input id="submit" data-bind="click: create" type="button" value="Create" />
+    </fieldset>
+}
+
+@section Scripts {
+
+    @Scripts.Render("~/bundles/dynamicForms")    
+    
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+
+            var viewModel = new ViewModels.Project.NewProjectViewModel({
+                apiPostUrl: '/api/project',
+                successRedirectUrl: '@Url.Action("Dashboard", "Project", new { Area = "Project", projectKey = "[id]"})'
+            });
+
+            viewModel.initialize();                       
+        });
+    </script>
+}

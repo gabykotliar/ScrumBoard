@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Wellcome to ScrumBoard";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>Cause we love SCRUM and .Net</h2>
+            </hgroup>
+            <p>Open source and free forever!</p>
+        </div>
+    </section>
+}
+<h3>Getting Started:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>About</h5>
+        Read why we created this project int the about section.
+        @Html.ActionLink("Read more...", "About")
+    </li>
+
+    <li class="two">
+        <h5>Go directly into action</h5>
+        Start working with ScrumBoard by creating a new project and enjoy!
+        @Html.ActionLink("Create a new project", "New", "Projects")
+    </li>
+</ol>
