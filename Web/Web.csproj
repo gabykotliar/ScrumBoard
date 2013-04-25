@@ -274,6 +274,8 @@
       <DependentUpon>Utils.ts</DependentUpon>
     </Content>
     <Content Include="Views\Error\404.cshtml" />
+    <Content Include="Views\Error\403.cshtml" />
+    <Content Include="Views\Error\500.cshtml" />
     <TypeScriptCompile Include="Scripts\Constants.ts" />
     <Content Include="Scripts\Constants.js">
       <DependentUpon>Constants.ts</DependentUpon>

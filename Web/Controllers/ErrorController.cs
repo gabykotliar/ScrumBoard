@@ -16,7 +16,12 @@ namespace ScrumBoard.Web.Controllers
 
         public ActionResult InternalServerError500()
         {
-            return View("Error");
+            return View("500");
+        }
+
+        public ActionResult Forbidden403()
+        {
+            return View("403");
         }
     }
 }
