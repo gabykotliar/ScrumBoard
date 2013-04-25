@@ -60,7 +60,7 @@ Web/Properties/PublishProfiles/ScrumBoard - FTP.pubxml
 Web/Properties/PublishProfiles/ScrumBoard - Web Deploy.pubxml
 
 #Binaries
-*.dbmdl
+#*.dbmdl
 
 #Visual Studio extension temp file
 WE-Palette.css
