@@ -35,7 +35,8 @@ namespace ScrumBoard.Web.Controllers.Api
 
         private void AddResourceLocation(Project project, HttpResponseMessage response)
         {
-            string uri = Url.Link("DefaultApi", new { id = project.Code });
+            string uri = Url.Link("DefaultApi", new { controller = "Project", id = project.Code });
+            
             response.Headers.Location = new Uri(uri);
         }
 

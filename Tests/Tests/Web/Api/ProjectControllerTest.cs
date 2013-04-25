@@ -62,11 +62,11 @@ namespace ScrumBoard.Tests.Web.Api
             var controller = GetApiProjectController(new Mock<ProjectService>());
 
             var mock = new Mock<NewProject>();
-            mock.Setup(m => m.ToEntity()).Returns(new Project { Id = 123 });
+            mock.Setup(m => m.ToEntity()).Returns(new Project { Code = "123" });
 
             var response = controller.Post(mock.Object);
 
-            response.Headers.Location.Should().Be("http://localhost/api/projects/123");
+            response.Headers.Location.AbsolutePath.Should().BeEquivalentTo("/api/project/123");
         }
 
         [TestMethod]

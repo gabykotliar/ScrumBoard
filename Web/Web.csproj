@@ -185,8 +185,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Project\Controllers\ProjectController.cs" />
     <Compile Include="Areas\Project\ProjectAreaRegistration.cs" />
-    <Compile Include="Controllers\Api\MatiController.cs" />
     <Compile Include="Controllers\Api\ProjectController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="App_Start\DependencyResolution\IoC.cs" />
     <Compile Include="App_Start\DependencyResolution\StructureMapDependencyResolver.cs" />
@@ -266,6 +266,7 @@
     <Content Include="Scripts\Utils.js.map">
       <DependentUpon>Utils.ts</DependentUpon>
     </Content>
+    <Content Include="Views\Error\404.cshtml" />
     <TypeScriptCompile Include="Scripts\Constants.ts" />
     <Content Include="Scripts\Constants.js">
       <DependentUpon>Constants.ts</DependentUpon>
@@ -315,7 +316,9 @@
     <Content Include="Scripts\ViewModels.min.js">
       <DependentUpon>ViewModels.ts</DependentUpon>
     </Content>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
