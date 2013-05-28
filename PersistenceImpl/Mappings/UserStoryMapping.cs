@@ -10,6 +10,7 @@ namespace ScrumBoard.Persistence.Implementation.Mappings
             Id(x => x.Id).GeneratedBy.Identity();
             Map(x => x.Effort);
             Map(x => x.IsDone);
+            Map(x => x.Title);
             Map(x => x.Text);
             References(x => x.Sprint).Column("SprintId").Nullable();
             References(x => x.Project).Column("ProjectId");

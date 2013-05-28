@@ -59,6 +59,13 @@ module ViewModels.Project
     { 
         successRedirectUrl: string; 
     }
+
+    export interface NewUserStoryViewModelConfigurationOptions 
+        extends NewModelConfigurationOptions 
+    { 
+        successRedirectUrl: string; 
+    }
+
      
     export class NewProjectViewModel 
         extends NewResourceViewModel {
@@ -140,4 +147,32 @@ module ViewModels.Project
             });
         }
     }
+
+
+     
+    export class NewUserStoryViewModel 
+        extends NewResourceViewModel {
+
+        Title: KnockoutObservableString;
+                
+        constructor (public options: NewUserStoryViewModelConfigurationOptions) {
+            super(options);
+
+            var self = this;
+
+            this.Title = ko.observable('');
+        }
+
+        toJSON(): string {
+
+            return JSON.stringify({
+                Title: this.Title
+            });
+        }
+
+        onResourceCreated(data: any, textStatus: string, jqXHR: JQueryXHR) { 
+            //window.location.href = this.options.successRedirectUrl.replace("[id]", data.Code);
+        }
+    }
+
 }
