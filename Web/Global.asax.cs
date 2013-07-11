@@ -6,7 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-
+using Common.Web.Mvc.Routing;
 using ScrumBoard.Web.App_Start;
 using ScrumBoard.Web.Controllers;
 
@@ -68,13 +68,9 @@ namespace ScrumBoard.Web
 
         private RouteData GetErrorRouteData(HttpException httpException, CustomErrorsSection config)
         {
-            var routeData = new RouteData();
-
-            routeData.Values.Add("controller", "Error"); //TODO: get this value from the configuration to. Need to be able to parse route info here
-
             var statusCode = httpException.GetHttpCode().ToString(CultureInfo.InvariantCulture);
 
-            routeData.Values.Add("action", config.Errors[statusCode] != null
+            var routeData = RouteInfo.GetRouteDataByUrl(config.Errors[statusCode] != null
                                              ? config.Errors[statusCode].Redirect
                                              : config.DefaultRedirect);
 
