@@ -1,10 +1,12 @@
-﻿using ScrumBoard.Domain;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using ScrumBoard.Domain;
 
 namespace ScrumBoard.Services
 {
     public interface ProjectService
     {
-        void Create(Project project);
+        ICollection<ValidationResult> Create(Project project);
 
         Project GetByCode(string code);
     }

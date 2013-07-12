@@ -199,6 +199,7 @@
     <Compile Include="App_Start\DependencyResolution\StructureMapDependencyResolver.cs" />
     <Compile Include="App_Start\DependencyResolution\StructureMapDependencyScope.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
+    <Compile Include="Extensions\ModelStateDictionaryExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

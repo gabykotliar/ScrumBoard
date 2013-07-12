@@ -107,3 +107,4 @@ var ViewModels;
     })(ViewModels.Project || (ViewModels.Project = {}));
     var Project = ViewModels.Project;
 })(ViewModels || (ViewModels = {}));
+//@ sourceMappingURL=ViewModels.js.map

@@ -1,11 +1,18 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-
+using System.Web.Http.ModelBinding;
 using ScrumBoard.Domain;
 using ScrumBoard.Services;
 using ScrumBoard.Web.Models;
+
+using ScrumBoard.Web.Extensions;
 
 namespace ScrumBoard.Web.Controllers.Api
 {
@@ -24,8 +31,12 @@ namespace ScrumBoard.Web.Controllers.Api
 
             var entity = project.ToEntity();
 
-            service.Create(entity);
+            var result = service.Create(entity);
 
+            ModelState.Add(result);
+
+            if (!ModelState.IsValid) return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            
             var response = Request.CreateResponse(HttpStatusCode.Created, project);
             
             AddResourceLocation(entity, response);
