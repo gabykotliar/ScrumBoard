@@ -10,7 +10,6 @@
 </hgroup>
 
 @using (Html.BeginForm()) {
-    @Html.ValidationSummary()
 
     <fieldset>
         <legend>Registration Form</legend>
@@ -18,14 +17,17 @@
             <li>
                 @Html.LabelFor(m => m.Name, "Name")
                 @Html.DataBindedTextBoxFor(m => m.Name, new Dictionary<string, object> {{"valueUpdate", "'afterkeydown'"}}) 
+                @Html.ValidationMessageFor(m => m.Name)
             </li>
             <li>
                 @Html.LabelFor(m => m.Vision, "Vision")
                 @Html.DataBindedTextAreaFor(m => m.Vision)
+                @Html.ValidationMessageFor(m => m.Vision)
             </li>
             <li>
                 @Html.LabelFor(m => m.Name, "Code")
                 @Html.DataBindedTextBoxFor(m => m.Code)
+                @Html.ValidationMessageFor(m => m.Code)
             </li>
         </ol>
         <input id="submit" data-bind="click: create" type="button" value="Create" />

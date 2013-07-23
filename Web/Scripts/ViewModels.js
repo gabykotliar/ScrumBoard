@@ -66,6 +66,11 @@ var ViewModels;
             NewProjectViewModel.prototype.onResourceCreated = function (data, textStatus, jqXHR) {
                 window.location.href = this.options.successRedirectUrl.replace("[id]", data.Code);
             };
+            NewProjectViewModel.prototype.onError = function (jqXHR, textStatus, errorThrown) {
+                var frm = this.form;
+                var resp = $.parseJSON(jqXHR.responseText);
+                frm.validate().showErrors(resp.ModelState);
+            };
             NewProjectViewModel.prototype.getCode = function () {
                 if(this.suggestOn) {
                     this.code = this.Name().replace(/[[\]{}()*+?.,\\^$|#\s]+/g, '_');
@@ -107,4 +112,3 @@ var ViewModels;
     })(ViewModels.Project || (ViewModels.Project = {}));
     var Project = ViewModels.Project;
 })(ViewModels || (ViewModels = {}));
-//@ sourceMappingURL=ViewModels.js.map

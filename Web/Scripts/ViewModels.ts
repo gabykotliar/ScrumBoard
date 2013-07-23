@@ -80,6 +80,9 @@ module ViewModels.Project
             this.Code = ko.computed({ read: self.getCode, 
                                       write: self.setManualCode, 
                                       owner: this });
+
+            //var frm = <any>this.form;
+            //frm.validate().showErrors({ Code: [ 'The code must be unique.' ] });
         }
 
         toJSON(): string {
@@ -93,6 +96,15 @@ module ViewModels.Project
 
         onResourceCreated(data: any, textStatus: string, jqXHR: JQueryXHR) { 
             window.location.href = this.options.successRedirectUrl.replace("[id]", data.Code);
+        }
+
+        onError(jqXHR: JQueryXHR, textStatus: string, errorThrown: string): any { 
+            //new Utils.ErrorHandler().webApiError(jqXHR, textStatus, errorThrown);
+
+            var frm = <any>this.form;
+            var resp = <any>$.parseJSON(jqXHR.responseText);
+
+            frm.validate().showErrors(resp.ModelState);
         }
 
         getCode(): string { 
